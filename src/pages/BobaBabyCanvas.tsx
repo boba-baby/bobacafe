@@ -211,9 +211,9 @@ export const BobaBabyCanvas = (props: IProps) => {
             layers.push(newLayer);
           }
         }
+      } else {
+        console.error("missing", traitType, ":", traitName);
       }
-    } else {
-      console.error("missing", traitType, traitName);
     }
   }
 

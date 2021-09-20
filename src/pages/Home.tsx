@@ -726,11 +726,11 @@ export const Home = () => {
                 Accessory: "Leaf",
                 Eyes: "Sparkly Double Lash",
                 Glasses: "None",
-                Blush: "Light Pink Circle Blush",
+                Blush: "Light Pink Circle",
                 Sticker: "Solana",
                 Cup: "White",
                 Drink: "Gradient Blue-Pink",
-                Boba: "Shaken Plain Boba",
+                Boba: "Shaken Boba",
                 Background: "Plain Green",
               }}
               noWatermark={true}
@@ -747,14 +747,14 @@ export const Home = () => {
               baby={{
                 Lid: ["Mouse", "Gray"],
                 Straw: "Blue",
-                Accessory: "Bow-Pink",
+                Accessory: "Pink Bow",
                 Eyes: "Closed U",
                 Glasses: "None",
-                Blush: "Blue Star Blush",
+                Blush: "Blue Star",
                 Sticker: "Diamond",
                 Cup: "White",
                 Drink: "Solid Periwinkle",
-                Boba: "Hearts and Stars Full",
+                Boba: "Hearts and Stars",
                 Background: "Plain Pink",
               }}
               noWatermark={true}
@@ -774,11 +774,11 @@ export const Home = () => {
                 Accessory: "Snail",
                 Eyes: "Red Heart",
                 Glasses: "Orange Round Sunglasses",
-                Blush: "Purple Transparent Circle Blush",
+                Blush: "Purple Transparent Circle",
                 Sticker: "None",
                 Cup: "White",
                 Drink: "Solid Pink",
-                Boba: "Boba Three Rows",
+                Boba: "Three Rows Boba",
                 Background: "Plain Yellow",
               }}
               noWatermark={true}
