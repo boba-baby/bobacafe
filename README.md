@@ -29,7 +29,7 @@ npm start
 
 ## How to view the art definition JSON
 
-See [babyArtDefinition.json](./src/babyArtDefinition.json) for the JSON definition of all traits. TypeScript typings for this file is available at [IArtDef.json](./src/IArtDef.json).
+See [babyArtDefinition.json](./src/babyArtDefinition.json) for the JSON definition of all traits. TypeScript typings for this file is available at [IArtDef.ts](./src/IArtDef.ts).
 
 Preview:
 

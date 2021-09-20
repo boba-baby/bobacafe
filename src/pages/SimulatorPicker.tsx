@@ -195,6 +195,19 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
 
   let variantPicker: JSX.Element | undefined;
 
+  const LoadingMessage: React.ComponentType = () => {
+    return (
+      <div
+        css={css`
+          text-align: center;
+          padding: 9px 0 8px 0;
+          color: #888;
+        `}
+      >
+        No trait found with filter
+      </div>
+    );
+  };
   if (props.traitType === "Lid" && selectedSubTraitName !== undefined) {
     const possibleSubTraits = Array.from(
       uniq(
@@ -381,6 +394,7 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
             components={{
               Option: CustomOption,
               LoadingIndicator: RarityIndicator,
+              LoadingMessage,
             }}
           />
         </div>
@@ -574,6 +588,7 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
           components={{
             Option: CustomOption,
             LoadingIndicator: RarityIndicator,
+            LoadingMessage,
           }}
         />
       </div>

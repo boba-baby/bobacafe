@@ -349,8 +349,11 @@ export const EvolvingBaby = () => {
           position: absolute;
           width: 0;
           height: 0;
+          left: 0;
+          top: 0;
           overflow: hidden;
           user-select: none;
+          display: none;
         `}
       >
         {preloadImages}

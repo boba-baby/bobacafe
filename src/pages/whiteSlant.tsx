@@ -5,7 +5,8 @@ import { jsx, css } from "@emotion/react";
 export const WhiteSlantTop = () => (
   <div
     css={css`
-      width: 100%;
+      width: 100vw;
+      overflow: hidden;
       height: 0;
       position: relative;
       z-index: 3;
@@ -31,7 +32,8 @@ export const WhiteSlantTop = () => (
 export const WhiteSlantBottom = () => (
   <div
     css={css`
-      width: 100%;
+      width: 100vw;
+      overflow: hidden;
       height: 0;
       position: relative;
       top: 1px;
@@ -57,7 +59,8 @@ export const WhiteSlantBottom = () => (
 export const BlueSlantTop = () => (
   <div
     css={css`
-      width: 100%;
+      width: 100vw;
+      overflow: hidden;
       height: 0;
       position: relative;
       z-index: 3;
@@ -83,7 +86,8 @@ export const BlueSlantTop = () => (
 export const BlueSlantBottom = () => (
   <div
     css={css`
-      width: 100%;
+      width: 100vw;
+      overflow: hidden;
       height: 0;
       position: relative;
       top: 1px;

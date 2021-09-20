@@ -35,6 +35,7 @@ export const Home = () => {
             justify-content: space-between;
             max-width: 800px;
             margin: 0 auto;
+            overflow: hidden;
 
             @media (max-width: 760px) {
               flex-wrap: wrap;
@@ -175,7 +176,7 @@ export const Home = () => {
           css={css`
             max-width: 820px;
             display: block;
-            padding: 140px 60px;
+            padding: 140px 40px;
             margin: 0 auto;
             p {
               font-size: 18px;
@@ -456,7 +457,7 @@ export const Home = () => {
           background: linear-gradient(10deg, #ffc7dd 20%, #59d3ff);
           position: relative;
           z-index: 0;
-          padding: 120px 60px 200px 60px;
+          padding: 160px 60px 200px 60px;
 
           /* color: rgba(0, 0, 0, 0.8); */
           font-size: 20px;
@@ -495,34 +496,22 @@ export const Home = () => {
           `}
         >
           <h2>FAQ</h2>
+
           <h3>What are BobaBabies?</h3>
-          <p>
-            BobaBabies are cute and magical bubble tea drinks. BobaBabies were
-            born on a starry night, when a famous Tokyo boba chef sprinkled
-            magical boba pixie dust into her batch of drinks. The BobaBabies
-            sprung to life and created a friendly and fun loving society on the
-            beaches of Japan.
-          </p>
-          <p>
-            But some BobaBabies yearned for adventure. A group of 8,888
-            BobaBabies set out on a journey in a Boba SailBoat, and the winds
-            carried them all the way to Solana Beach. Now, those babies are
-            relaxing on the Solana blockchain. Befriend some BobaBabies before
-            the BobaBoat leaves port again!
-          </p>
-          <p>
-            For more lore, join the{" "}
-            <a href="https://discord.com/invite/yQrchtzmnB">
-              Discord community
-            </a>
-            .
-          </p>
+          <p>BobaBabies non fungible tokens (NFTs) on the Solana blockchain.</p>
           <h3>How can I get a BobaBaby?</h3>
           <p>
             You can mint a random BobaBaby on https://boba.baby starting on the
             launch date, and until the project sells out. BobaBabies will also
             be available for purchase on secondary markets shortly after the
             launch.
+          </p>
+
+          <h3>How are the traits for my BobaBaby determined?</h3>
+          <p>
+            When you mint a BobaBaby, traits will be assigned randomly. Rarity
+            frequencies for each trait are displayed on this website. You will
+            be able to see your BobaBaby traits within 1 minute after minting.
           </p>
           <h3>What are the technical details?</h3>
           <p>
@@ -547,7 +536,7 @@ export const Home = () => {
           <p>
             There are 88 BobaBabies reserved for giveaways, partnerships, and
             post-launch marketing. The rest of the{" "}
-            {Number(8888).toLocaleString()} BobaBabies will be available for
+            {Number(8800).toLocaleString()} BobaBabies will be available for
             public mint.
           </p>
           <h3>What is the license for BobaBaby art and lore?</h3>
@@ -622,6 +611,22 @@ export const Home = () => {
             From there, it is up to the community to enjoy the art and decide
             what the universe looks like - we do not want to compromise the art
             project with excessive airdrops or governance etc.
+          </p>
+
+          <h3>What is the story behind BobaBabies?</h3>
+          <p>
+            BobaBabies are cute and magical bubble tea drinks. BobaBabies were
+            born on a starry night, when a famous Tokyo boba chef sprinkled
+            magical boba pixie dust into her batch of drinks. The BobaBabies
+            sprung to life and created a friendly and fun loving society on the
+            beaches of Japan.
+          </p>
+          <p>
+            But some BobaBabies yearned for adventure. A group of 8,888
+            BobaBabies set out on a journey in a Boba SailBoat, and the winds
+            carried them all the way to Solana Beach. Now, those babies are
+            relaxing on the Solana blockchain. Befriend some BobaBabies before
+            the BobaBoat leaves port again!
           </p>
           <h3>How can I join the community or get in touch?</h3>
           <p>
@@ -796,9 +801,9 @@ export const Home = () => {
 
       <footer
         css={css`
-          max-width: 720px;
+          max-width: 670px;
           margin: 100px auto 0 auto;
-          padding: 60px;
+          padding: 40px;
           p {
             font-size: 14px;
             color: #999;
@@ -840,9 +845,7 @@ export const Home = () => {
         >
           <img
             src={publicDomainMark}
-            css={css`
-              margin-bottom: 2px;
-            `}
+            css={css``}
             alt="No Copyright"
             width="9"
             height="9"

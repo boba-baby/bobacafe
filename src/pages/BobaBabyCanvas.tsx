@@ -16,6 +16,7 @@ interface IProps {
   noBackground?: boolean;
   noWatermark?: boolean;
   mobileForcedHover?: boolean;
+  thecss?: SerializedStyles;
 }
 
 const zoomLayer = css`
@@ -33,6 +34,7 @@ const canvasContainer = css`
   width: 100%;
   /* min-height: 50px; */
   padding-top: 100%;
+  /* overflow: hidden; */
   overflow: hidden;
 
   & > div {
@@ -83,6 +85,7 @@ const betaLayer = css`
   left: 0;
   right: 0;
   z-index: 30;
+  overflow: hidden;
   &::after {
     font-family: "Handlee";
     content: "beta";
@@ -120,6 +123,10 @@ const useSize = (target: RefObject<HTMLDivElement>) => {
   useResizeObserver(target, (entry) => setSize(entry.contentRect.width));
   return size;
 };
+
+const basethecss = css`
+  overflow: hidden;
+`;
 
 export const BobaBabyCanvas = (props: IProps) => {
   let layers: Layers = [];
@@ -226,6 +233,7 @@ export const BobaBabyCanvas = (props: IProps) => {
 
   let thecss: SerializedStyles[] = [];
 
+  thecss.push(basethecss);
   if (supportsTouch) {
     if (hovering || props.mobileForcedHover) {
       thecss = [canvasContainer, canvasContainerZoomed];
@@ -241,6 +249,9 @@ export const BobaBabyCanvas = (props: IProps) => {
   }
   if (props.unZoomable) {
     thecss = [canvasContainer];
+  }
+  if (props.thecss) {
+    thecss.push(props.thecss);
   }
 
   return (

@@ -55,7 +55,7 @@ export const rarityFinder = (
 ): [number, Rarity] => {
   if (traitType === "Lid") {
     let total = 0;
-    let rarityName: Rarity = "Common";
+    let rarityName: Rarity = "Secret Rare";
     for (const currentTraitName in typeToTrait[traitType]) {
       if (currentTraitName.startsWith(traitName + "-")) {
         total += typeToTrait[traitType][currentTraitName].rarityFrequency;
@@ -65,6 +65,8 @@ export const rarityFinder = (
         );
       }
     }
+    console.log(rarityName, "Meow");
+
     return [total, rarityName];
   } else if (typeToTrait[traitType][traitName]) {
     return [

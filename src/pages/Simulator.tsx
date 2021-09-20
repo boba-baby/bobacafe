@@ -129,16 +129,13 @@ export const Simulator = () => {
     <div
       css={css`
         max-width: 2400px;
-        margin: 0 auto 120px auto;
+        margin: 0 auto 0 auto;
       `}
     >
       <div
         css={css`
           display: flex;
           width: 100%;
-          justify-content: center;
-          align-items: center;
-          padding-right: 40px;
 
           @media (max-width: 800px) {
             flex-wrap: wrap;
@@ -150,7 +147,6 @@ export const Simulator = () => {
             width: 100%;
             flex-grow: 1;
             max-width: 100vh;
-
             max-width: calc(var(--vh, 1vh) * 100);
             cursor: ns-resize;
             touch-action: manipulation;
@@ -163,7 +159,15 @@ export const Simulator = () => {
             });
           }}
         >
-          <BobaBabyCanvas baby={babySpecs} small={false} />
+          <BobaBabyCanvas
+            baby={babySpecs}
+            small={false}
+            thecss={css`
+              /* display: block; */
+              position: sticky;
+              top: 0;
+            `}
+          />
         </Tappable>
         <div
           css={css`
@@ -174,20 +178,27 @@ export const Simulator = () => {
             max-width: 900px;
             display: flex;
             flex-direction: column;
-            padding-bottom: 40px;
-            padding-left: 20px;
+            padding-top: 80px;
+            padding-bottom: 120px;
+            padding-left: 40px;
+            padding-right: 40px;
+            align-self: center;
 
             @media (max-width: 800px) {
-              padding-top: 20px;
+              padding-top: 40px;
             }
           `}
         >
           <div
             css={css`
-              order: 2;
               padding-top: 20px;
+              padding-bottom: 20px;
               text-align: center;
+              order: 3;
 
+              @media (max-width: 800px) {
+                order: 1;
+              }
               @media (max-width: 640px) {
                 padding-bottom: 20px;
                 padding-top: 0;
@@ -266,19 +277,18 @@ export const Simulator = () => {
           <div
             ref={controlsRef}
             css={css`
-              order: 1;
               width: 100%;
               display: grid;
               gap: 10px 20px;
               grid-template-columns: repeat(1, 1fr);
               align-content: space-around;
               justify-content: space-around;
-              padding-left: 20px;
               box-sizing: border-box;
+              order: 2;
 
               @media (max-width: 640px) {
                 grid-template-columns: repeat(1, 1fr);
-                order: 3;
+                /* order: 1; */
               }
 
               &.layoutStacked .pickerAndLabelWrapper {
@@ -308,12 +318,6 @@ export const Simulator = () => {
               }
               &.layout3x {
                 grid-template-columns: repeat(3, 1fr);
-              }
-
-              @media (max-width: 800px) {
-                padding-top: 20px;
-                padding-left: 40px;
-                padding-right: 40px;
               }
             `}
             className={pickerLayoutClass}
