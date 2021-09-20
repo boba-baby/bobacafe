@@ -136,6 +136,7 @@ export const Simulator = () => {
         css={css`
           display: flex;
           width: 100%;
+          justify-content: center;
 
           @media (max-width: 800px) {
             flex-wrap: wrap;
