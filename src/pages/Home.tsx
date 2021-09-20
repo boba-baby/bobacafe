@@ -428,7 +428,7 @@ export const Home = () => {
       >
         <div
           css={css`
-            padding: 90px 80px 80px 80px;
+            padding: 95px 80px 80px 80px;
           `}
         >
           <div

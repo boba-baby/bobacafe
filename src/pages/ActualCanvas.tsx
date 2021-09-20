@@ -182,6 +182,20 @@ export class ActualCanvas extends React.Component<ActualCanvasProps, State> {
       for (const image of this.loadTarget) {
         ctx.drawImage(image, 0, 0);
       }
+      ctx.font = `${this.props.resolution / 8}px Handlee`;
+
+      ctx.fillStyle = "rgba(0, 0, 0, 0.03)";
+      ctx.save();
+      ctx.translate(this.props.resolution, 0);
+      ctx.rotate(-Math.PI / 2);
+      ctx.textAlign = "center";
+      ctx.fillText(
+        "beta",
+        -this.props.resolution / 2,
+        -this.props.resolution * 0.055,
+        this.props.resolution
+      );
+      ctx.restore();
 
       const dataURL = canvas.toDataURL("image/png");
 
