@@ -26,6 +26,7 @@ const downloadLink = css`
   }
   &.loading {
     color: #555;
+    cursor: wait;
     .lds-dual-ring {
       display: inline-block;
     }
