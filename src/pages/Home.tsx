@@ -23,6 +23,7 @@ export const Home = () => {
       <div
         css={css`
           padding: 60px 60px 0 60px;
+          overflow: hidden;
 
           @media (max-width: 760px) {
             padding: 40px 0px 0 0px;
@@ -35,7 +36,6 @@ export const Home = () => {
             justify-content: space-between;
             max-width: 800px;
             margin: 0 auto;
-            overflow: hidden;
 
             @media (max-width: 760px) {
               flex-wrap: wrap;
@@ -428,7 +428,7 @@ export const Home = () => {
       >
         <div
           css={css`
-            padding: 70px 80px 80px 80px;
+            padding: 90px 80px 80px 80px;
           `}
         >
           <div

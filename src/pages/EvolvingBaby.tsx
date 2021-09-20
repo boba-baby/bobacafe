@@ -337,7 +337,6 @@ export const EvolvingBaby = () => {
         position: relative;
         border-radius: 12px;
 
-        overflow: hidden;
         transform: translateZ(0);
 
         will-change: transform;
@@ -351,7 +350,6 @@ export const EvolvingBaby = () => {
           height: 0;
           left: 0;
           top: 0;
-          overflow: hidden;
           user-select: none;
           display: none;
         `}

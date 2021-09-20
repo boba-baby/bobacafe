@@ -8,6 +8,7 @@ import { IsolatedPicker } from "./IsolatedPicker";
 import { generateLoadedRandom } from "./randomUtils";
 import { useElementSize } from "usehooks-ts";
 import { Tappable } from "./Tappable";
+import { ActualCanvas } from "./ActualCanvas";
 
 export type PickerLayout = "table" | "2x" | "3x" | "stacked";
 
@@ -124,7 +125,6 @@ export const Simulator = () => {
   } else if (pickerLayout === "3x") {
     pickerLayoutClass = " layout3x ";
   }
-  // console.log(pickerLayoutClass);
   return (
     <div
       css={css`
@@ -151,6 +151,8 @@ export const Simulator = () => {
             max-width: calc(var(--vh, 1vh) * 100);
             cursor: ns-resize;
             touch-action: manipulation;
+            transition: 0.15s width ease-out;
+            will-change: width;
           `}
           theref={babyCanvasContainerRef}
           onClickOrTap={() => {
@@ -218,8 +220,6 @@ export const Simulator = () => {
                 cursor: pointer;
               `}
               onClick={() => {
-                console.log("Click");
-
                 setIntendedBabySpecs(nextBabySpecs);
                 setNextBabySpecs(generateLoadedRandom());
                 setUpdateStack([
@@ -355,6 +355,48 @@ export const Simulator = () => {
           >
             <BobaBabyCanvas baby={intendedBabySpecs} small={false} />
             <BobaBabyCanvas baby={nextBabySpecs} small={false} />
+          </div>
+          <div
+            css={css`
+              order: 5;
+              margin-top: 10px;
+
+              @media (max-width: 800px) {
+                margin-top: 30px;
+              }
+            `}
+          >
+            <ActualCanvas
+              baby={intendedBabySpecs}
+              shouldComponentUpdate={updateStack.length === 0}
+              showDownloadLink={false}
+              setFavicon={true}
+              resolution={240}
+            />
+            <ActualCanvas
+              baby={intendedBabySpecs}
+              shouldComponentUpdate={updateStack.length === 0}
+              showDownloadLink={true}
+              resolution={240}
+            />
+            <ActualCanvas
+              baby={intendedBabySpecs}
+              shouldComponentUpdate={updateStack.length === 0}
+              showDownloadLink={true}
+              resolution={960}
+            />
+            <ActualCanvas
+              baby={intendedBabySpecs}
+              shouldComponentUpdate={updateStack.length === 0}
+              showDownloadLink={true}
+              resolution={2400}
+            />
+            <ActualCanvas
+              baby={intendedBabySpecs}
+              shouldComponentUpdate={updateStack.length === 0}
+              showDownloadLink={true}
+              resolution={6000}
+            />
           </div>
         </div>
       </div>

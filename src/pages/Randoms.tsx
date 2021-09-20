@@ -193,28 +193,10 @@ export const Randoms = () => {
     layout = [3, 2, 3, 2, 3, 2];
   }
 
-  const [babyHovered, setBabyHovered] = useState<number>(-1);
   const [popNextCandidate, setPopNextCandidate] =
     useState<FullBobaBaby>(initialNextCandidate);
   const [popNextNextCandidate, setPopNextNextCandidate] =
     useState<FullBobaBaby>(initialNextNextCandidate);
-
-  useEffect(() => {
-    // let n = 0;
-    const interval = setTimeout(() => {
-      // if (babyHovered === -1) return;
-      // n += 1;
-      // // if (n > 2) {
-      // setBabies((prevState) => {
-      //   const copy = prevState.slice();
-      //   copy[babyHovered] = popNextCandidate;
-      //   return copy;
-      // });
-      // setPopNextCandidate(generateLoadedRandom());
-      setBabyHovered(-1);
-    }, 4);
-    return () => clearTimeout(interval);
-  }, [babyHovered]);
 
   if (
     layout.reduce((prev, current) => {

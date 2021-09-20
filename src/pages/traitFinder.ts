@@ -65,7 +65,6 @@ export const rarityFinder = (
         );
       }
     }
-    console.log(rarityName, "Meow");
 
     return [total, rarityName];
   } else if (typeToTrait[traitType][traitName]) {
