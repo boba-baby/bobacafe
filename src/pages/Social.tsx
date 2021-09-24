@@ -10,16 +10,15 @@ export const Social = () => {
   return (
     <div
       css={css`
-        padding-top: 5px;
         a {
-          padding: 30px 12px;
+          padding: 30px 10px;
         }
         a:hover {
           opacity: 0.9;
         }
         img {
-          width: 40px;
-          height: 40px;
+          width: 30px;
+          height: 30px;
         }
 
         text-align: center;
@@ -44,7 +43,15 @@ export const Social = () => {
         target="_blank"
         href="https://github.com/boba-baby/bobacafe"
       >
-        <img src={githubLogo} alt="" />
+        <img
+          src={githubLogo}
+          alt=""
+          css={css`
+            width: 28px !important;
+            height: 28px !important;
+            margin-bottom: 1px;
+          `}
+        />
       </a>
     </div>
   );

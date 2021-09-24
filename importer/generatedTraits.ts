@@ -44,7 +44,7 @@ export type AllBlushTraits =
   | "Dark Pink Line"
   | "Dark Pink Oval"
   | "Dark Pink Spiral"
-  | "Gray Circle"
+  | "Gray Spiral"
   | "Light Pink Circle"
   | "Light Pink Heart"
   | "Light Pink Oval"
@@ -128,6 +128,8 @@ export type AllLidTraits =
   | "Pig-Pink"
   | "Poodle-Brown"
   | "Poodle-White"
+  | "Secret.01-A"
+  | "Secret.01-B"
   | "Shiba-Black"
   | "Shiba-Red";
 
@@ -222,6 +224,7 @@ export type AllAccessoryTraits =
   | "Red Rose Head"
   | "Red Rose"
   | "Red Strawberry"
+  | "Secret.01"
   | "Snail"
   | "Sparkles"
   | "Star Antenna"

@@ -86,17 +86,32 @@ const betaLayer = css`
   right: 0;
   z-index: 30;
   overflow: hidden;
-  &::after {
+  &::before {
     font-family: "Handlee";
     content: "beta";
     display: block;
     color: #000;
-    opacity: 0.03;
-    transform: rotate(-90deg);
+    opacity: 0.04;
+    transform: rotate(-90deg) translateY(90%);
 
-    font-size: 30px;
     position: absolute;
-    right: -45%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  &::after {
+    font-family: "Handlee";
+    content: "@BobaBabyNFT";
+    color: #000;
+    opacity: 0.04;
+    transform: rotate(-90deg) translateY(83%);
+
+    position: absolute;
+    width: 100%;
     height: 100%;
     text-align: center;
     line-height: 1;
@@ -105,8 +120,11 @@ const betaLayer = css`
 `;
 const betaFontSize = (canvasWidth: number) =>
   css`
+    &::before {
+      font-size: ${canvasWidth / 12}px;
+    }
     &::after {
-      font-size: ${canvasWidth / 8}px;
+      font-size: ${canvasWidth / 12}px;
     }
   `;
 

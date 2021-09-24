@@ -77,7 +77,7 @@ const findFirstLidVariant = (traitName: string): string => {
 
 const option = css`
   cursor: pointer;
-  padding: 8px 9px 8px 8px;
+  padding: 4px 9px 4px 8px;
   font-size: 16px;
   line-height: 1.25;
   display: flex;
@@ -95,7 +95,19 @@ const optionAmount = css`
 `;
 const optionLeftContainer = css`
   display: flex;
+  flex-grow: 1;
   align-items: center;
+  min-height: 40px;
+  margin-right: 4px;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
 `;
 const optionThumbnail = css`
   width: 30px;
@@ -122,10 +134,11 @@ const optionThumbnail = css`
 const rarityDescriptor = css`
   font-size: 14px;
   white-space: nowrap;
+  flex-grow: 0;
   span {
     padding: 0 8px;
     border-radius: 3px;
-    margin-left: 0;
+    margin-left: 1px;
     margin-right: 5px;
   }
 `;
@@ -133,25 +146,33 @@ const rarityDescriptor = css`
 const traitLoadingHackyBadge = css`
   font-size: 14px;
   margin-top: 1px;
-  span {
-    padding: 0 8px;
-    margin-right: -1px;
-    border-radius: 3px;
-  }
 `;
 
 const rarityBadgeBackground = {
   Common: css`
+    padding: 0 8px;
+    margin-right: -1px;
+    border-radius: 3px;
     background: #eee;
   `,
   Rare: css`
+    padding: 0 8px;
+    margin-right: -1px;
+    border-radius: 3px;
     background: #eab5ff;
   `,
   "Ultra Rare": css`
+    padding: 0 8px;
+    margin-right: -1px;
+    border-radius: 3px;
     background: #ffcf21;
   `,
   "Secret Rare": css`
-    background: #ffcf21;
+    padding: 0 8px;
+    margin-right: -1px;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
   `,
 };
 
@@ -163,10 +184,12 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
       })
     )
   );
-  const possibleTraitsOptions = possibleTraits.map((trait) => ({
-    value: trait,
-    label: trait,
-  }));
+  const possibleTraitsOptions = possibleTraits.map((trait) => {
+    return {
+      value: trait,
+      label: trait,
+    };
+  });
 
   if (possibleTraits[0] === undefined) {
     throw new Error("Shouldnt be undefined");
@@ -277,15 +300,15 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
       );
       const optionRarityIndicator = (
         <div css={rarityDescriptor}>
-          <span
-            css={css`
-              opacity: 0.2;
-            `}
-          >
-            {showRarityFrequency
-              ? `~${(rarityFrequency * 8888).toFixed(0)}`
-              : null}
-          </span>
+          {showRarityFrequency ? (
+            <span
+              css={css`
+                opacity: 0.2;
+              `}
+            >
+              `~${(rarityFrequency * 8888).toFixed(0)}`
+            </span>
+          ) : null}
           <span css={rarityBadgeBackground[rarityName]}>{rarityName}</span>{" "}
           {(Math.round(rarityFrequency * 10000) / 100).toFixed(2)}%
         </div>
@@ -321,7 +344,14 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
         >
           <div css={optionLeftContainer}>
             {thumbnail}
-            {optionProps.label}
+            <span
+              css={css`
+                /* overflow-wrap: break-word; */
+                /* word-break: break-all; */
+              `}
+            >
+              {optionProps.label}
+            </span>
           </div>
           {optionRarityIndicator}
         </div>
@@ -422,7 +452,11 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
           if (props.traitType === "Lid") {
             props.onChange([preview, findFirstLidVariant(preview)]);
           } else {
-            props.onChange(preview);
+            const traitFound = rarityFinder(props.traitType, preview);
+            if (traitFound && traitFound[1] === "Secret Rare") {
+            } else {
+              props.onChange(preview);
+            }
           }
         }
         focusedOptions = [];
@@ -448,7 +482,11 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
               findFirstLidVariant(optionProps.label),
             ]);
           } else {
-            props.onChange(optionProps.label);
+            const traitFound = rarityFinder(props.traitType, optionProps.label);
+            if (traitFound && traitFound[1] === "Secret Rare") {
+            } else {
+              props.onChange(optionProps.label);
+            }
           }
         }
         focusedOptions = [];
@@ -461,15 +499,15 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
     );
     let rarityInfo = (
       <div css={rarityDescriptor}>
-        <span
-          css={css`
-            opacity: 0.2;
-          `}
-        >
-          {showRarityFrequency
-            ? `~${(rarityFrequency * 8888).toFixed(0)}`
-            : null}
-        </span>
+        {showRarityFrequency ? (
+          <span
+            css={css`
+              opacity: 0.2;
+            `}
+          >
+            `~${(rarityFrequency * 8888).toFixed(0)}`
+          </span>
+        ) : null}
         <span css={rarityBadgeBackground[rarityName]}>{rarityName}</span>{" "}
         {(Math.round(rarityFrequency * 10000) / 100).toFixed(2)}%
       </div>
@@ -508,7 +546,13 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
       >
         <div css={optionLeftContainer}>
           {thumbnail}
-          {optionProps.label}
+          <span
+            css={css`
+              /* word-break: break-all; */
+            `}
+          >
+            {optionProps.label}
+          </span>
         </div>
         {rarityInfo}
       </div>
@@ -558,10 +602,18 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
               }, 5);
               props.onChange([newTrait, findFirstLidVariant(newTrait)]);
             } else {
-              setTimeout(() => {
-                setSelectedTraitName(newTrait);
-              }, 5);
-              props.onChange(newTrait);
+              const traitFound = rarityFinder(props.traitType, newTrait);
+              if (traitFound && traitFound[1] === "Secret Rare") {
+                props.onChange(selectedTraitName);
+                alert(
+                  "Secret rare traits can not be previewed. They will be revealed after the mint goes live."
+                );
+              } else {
+                setTimeout(() => {
+                  setSelectedTraitName(newTrait);
+                }, 5);
+                props.onChange(newTrait);
+              }
             }
           }}
           menuShouldScrollIntoView={false}

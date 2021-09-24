@@ -65,7 +65,6 @@ type State = {
 };
 interface ActualCanvasProps {
   baby: FullBobaBaby;
-  shouldComponentUpdate: boolean;
   resolution: number;
   setFavicon?: boolean;
   showDownloadLink?: boolean;
@@ -104,12 +103,9 @@ export class ActualCanvas extends React.Component<ActualCanvasProps, State> {
       this.renderCanvas(false, true);
     }
   }
-  shouldComponentUpdate(props: {
-    baby: FullBobaBaby;
-    shouldComponentUpdate: boolean;
-  }): boolean {
+  shouldComponentUpdate(props: { baby: FullBobaBaby }): boolean {
     this.downloadReady = false;
-    return props.shouldComponentUpdate;
+    return true;
   }
   onDownloadClick(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     if (this.downloadReady) {
@@ -182,9 +178,8 @@ export class ActualCanvas extends React.Component<ActualCanvasProps, State> {
       for (const image of this.loadTarget) {
         ctx.drawImage(image, 0, 0);
       }
-      ctx.font = `${this.props.resolution / 8}px Handlee`;
-
-      ctx.fillStyle = "rgba(0, 0, 0, 0.03)";
+      ctx.font = `${this.props.resolution / 12}px Handlee`;
+      ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
       ctx.save();
       ctx.translate(this.props.resolution, 0);
       ctx.rotate(-Math.PI / 2);
@@ -192,7 +187,14 @@ export class ActualCanvas extends React.Component<ActualCanvasProps, State> {
       ctx.fillText(
         "beta",
         -this.props.resolution / 2,
-        -this.props.resolution * 0.055,
+        -this.props.resolution * 0.034,
+        this.props.resolution
+      );
+
+      ctx.fillText(
+        "@BobaBabyNFT",
+        -this.props.resolution / 2,
+        -this.props.resolution * 0.104,
         this.props.resolution
       );
       ctx.restore();
@@ -202,20 +204,23 @@ export class ActualCanvas extends React.Component<ActualCanvasProps, State> {
       const favicon: HTMLLinkElement | null = document.getElementById(
         "favicon"
       ) as HTMLLinkElement;
-      if (!favicon) return;
-      favicon.href = dataURL;
+      if (favicon) {
+        favicon.href = dataURL;
+      }
 
       const favicon32: HTMLLinkElement | null = document.getElementById(
         "favicon32"
       ) as HTMLLinkElement;
-      if (!favicon) return;
-      favicon32.href = dataURL;
+      if (favicon32) {
+        favicon32.href = dataURL;
+      }
 
       const favicon16: HTMLLinkElement | null = document.getElementById(
         "favicon16"
       ) as HTMLLinkElement;
-      if (!favicon) return;
-      favicon16.href = dataURL;
+      if (favicon16) {
+        favicon16.href = dataURL;
+      }
 
       if (download && this.anchorRef) {
         this.anchorRef.href = dataURL;

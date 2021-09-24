@@ -5,7 +5,7 @@ import { jsx, css } from "@emotion/react";
 import { BobaBabyCanvas } from "./BobaBabyCanvas";
 import { FullBobaBaby, TraitType } from "../IArtDef";
 import { IsolatedPicker } from "./IsolatedPicker";
-import { generateLoadedRandom } from "./randomUtils";
+import { generateLoadedRandom, rooooolRandomFromHash } from "./randomUtils";
 import { useElementSize } from "usehooks-ts";
 import { Tappable } from "./Tappable";
 import { ActualCanvas } from "./ActualCanvas";
@@ -98,6 +98,10 @@ export const Simulator = () => {
         }
         onChange={function (trait): void {
           setBabySpecs((prevState) => ({ ...prevState, [traitType]: trait }));
+          setIntendedBabySpecs((prevState) => ({
+            ...prevState,
+            [traitType]: trait,
+          }));
         }}
         pickerLayout={pickerLayout}
       />
@@ -176,7 +180,7 @@ export const Simulator = () => {
           css={css`
             /* width: 100%; */
             flex-grow: 1;
-            min-width: 340px;
+            min-width: 360px;
             flex-shrink: 0;
             max-width: 900px;
             display: flex;
@@ -189,6 +193,9 @@ export const Simulator = () => {
 
             @media (max-width: 800px) {
               padding-top: 40px;
+            }
+            @media (max-width: 360px) {
+              min-width: 300px;
             }
           `}
         >
@@ -273,6 +280,70 @@ export const Simulator = () => {
             >
               Randomize
             </button>
+            {/* <button
+              css={css`
+                width: 50%;
+                margin: 0 auto;
+                height: 40px;
+                border: 2px solid #94daff;
+                border-radius: 4px;
+                background: #94daff22;
+                cursor: pointer;
+              `}
+              onClick={() => {
+                setIntendedBabySpecs(nextBabySpecs);
+                setNextBabySpecs(rooooolRandomFromHash());
+                setUpdateStack([
+                  {
+                    traitType: "Lid",
+                    traitValue: nextBabySpecs.Lid[0],
+                    subTraitValue: nextBabySpecs.Lid[1],
+                  },
+                  {
+                    traitType: "Straw",
+                    traitValue: nextBabySpecs.Straw,
+                  },
+                  {
+                    traitType: "Accessory",
+                    traitValue: nextBabySpecs.Accessory,
+                  },
+                  {
+                    traitType: "Eyes",
+                    traitValue: nextBabySpecs.Eyes,
+                  },
+                  {
+                    traitType: "Glasses",
+                    traitValue: nextBabySpecs.Glasses,
+                  },
+                  {
+                    traitType: "Blush",
+                    traitValue: nextBabySpecs.Blush,
+                  },
+                  {
+                    traitType: "Sticker",
+                    traitValue: nextBabySpecs.Sticker,
+                  },
+                  {
+                    traitType: "Cup",
+                    traitValue: nextBabySpecs.Cup,
+                  },
+                  {
+                    traitType: "Drink",
+                    traitValue: nextBabySpecs.Drink,
+                  },
+                  {
+                    traitType: "Boba",
+                    traitValue: nextBabySpecs.Boba,
+                  },
+                  {
+                    traitType: "Background",
+                    traitValue: nextBabySpecs.Background,
+                  },
+                ]);
+              }}
+            >
+              TrueRandomizer
+            </button> */}
           </div>
 
           <div
@@ -368,32 +439,27 @@ export const Simulator = () => {
           >
             <ActualCanvas
               baby={intendedBabySpecs}
-              shouldComponentUpdate={updateStack.length === 0}
               showDownloadLink={false}
               setFavicon={true}
               resolution={240}
             />
             <ActualCanvas
               baby={intendedBabySpecs}
-              shouldComponentUpdate={updateStack.length === 0}
               showDownloadLink={true}
               resolution={240}
             />
             <ActualCanvas
               baby={intendedBabySpecs}
-              shouldComponentUpdate={updateStack.length === 0}
               showDownloadLink={true}
               resolution={960}
             />
             <ActualCanvas
               baby={intendedBabySpecs}
-              shouldComponentUpdate={updateStack.length === 0}
               showDownloadLink={true}
               resolution={2400}
             />
             <ActualCanvas
               baby={intendedBabySpecs}
-              shouldComponentUpdate={updateStack.length === 0}
               showDownloadLink={true}
               resolution={6000}
             />

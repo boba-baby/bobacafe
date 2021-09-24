@@ -123,10 +123,10 @@ async function extendTo6KThenResize(
     console.log("Returned:", metadata.width, metadata.height, originalSize);
     return Promise.resolve();
   }
-  if (metadata.width < 5000 || metadata.height < 5000) {
-    console.log(`Error: File is less than 5kx5k ${original}`);
-    return Promise.resolve();
-  }
+  // if (metadata.width < 5000 || metadata.height < 5000) {
+  //   console.log(`Error: File is less than 5kx5k ${original}`);
+  //   return Promise.resolve();
+  // }
 
   const sixKayDest = dest.replace(".png", `.6000.png`);
 
@@ -388,7 +388,9 @@ function setRarity(
     }
   }
 
-  throw new Error(`Couldnt find ${traitType} ${traitName} ${subTraitName}`);
+  throw new Error(
+    `Couldnt find ${traitType}: "${traitName}" - "${subTraitName}"`
+  );
 }
 
 function setBackgroundRarity(rarity: number, traitName: AllBackgroundTraits) {
@@ -453,6 +455,8 @@ setLidRarity(0.5, "Nigiri-Light Pink");
 setLidRarity(0.5, "Nigiri-Red Orange");
 setLidRarity(0.5, "Onigiri-Black and White");
 setLidRarity(0.5, "Onigiri-Flavored");
+setLidRarity(0.1, "Secret.01-A");
+setLidRarity(0.1, "Secret.01-B");
 
 setBackgroundRarity(0.25, "Blue Pink Clouds");
 setBackgroundRarity(0.5, "Blue White Bokeh");
@@ -472,7 +476,7 @@ setBlushRarity(0.2, "Dark Pink Heart");
 setBlushRarity(1, "Dark Pink Line");
 setBlushRarity(1, "Dark Pink Oval");
 setBlushRarity(0.5, "Dark Pink Spiral");
-setBlushRarity(1, "Gray Circle");
+setBlushRarity(1, "Gray Spiral");
 setBlushRarity(1, "Light Pink Circle");
 setBlushRarity(0.2, "Light Pink Heart");
 setBlushRarity(1, "Light Pink Oval");
@@ -592,6 +596,7 @@ setAccessoryRarity(0.1, "Sparkles");
 setAccessoryRarity(1, "Star Antenna");
 setAccessoryRarity(1, "White Bow");
 setAccessoryRarity(0.5, "Yellow Rose Head");
+setAccessoryRarity(0.1, "Secret.01");
 
 setStickerRarity(0.5, "BTC");
 setStickerRarity(1, "Bandaid");
@@ -657,6 +662,7 @@ function calculateRarityNameAndPercent() {
     let weightFromC = 0;
     let weightFromR = 0;
     let weightFromUR = 0;
+    let weightFromSR = 0;
 
     for (const trait of babyArtDefinition[traitType].traits) {
       totalWeight += trait.rarity;
@@ -667,10 +673,25 @@ function calculateRarityNameAndPercent() {
       if (trait.traitName === "None") {
         weightFromNone += trait.rarity;
       }
+      if (trait.traitName.match(/Secret\.[0-9][0-9]/)) {
+        if (trait.rarity > thresholdUR) {
+          console.log(
+            `Secret rares must be UR rarity ${traitType} "${trait.traitName}" Rarity: ${trait.rarity}`
+          );
+        }
+      }
 
       if (trait.rarity < thresholdUR) {
-        trait.rarityName = "Ultra Rare";
-        weightFromUR += trait.rarity;
+        if (trait.traitName.match(/Secret\.[0-9][0-9]/)) {
+          // console.log("Matched", trait);
+
+          trait.rarityName = "Secret Rare";
+
+          weightFromSR += trait.rarity;
+        } else {
+          trait.rarityName = "Ultra Rare";
+          weightFromUR += trait.rarity;
+        }
       } else if (trait.rarity < thresholdR) {
         trait.rarityName = "Rare";
         weightFromR += trait.rarity;
@@ -682,22 +703,47 @@ function calculateRarityNameAndPercent() {
 
     console.log();
     console.log(traitType);
+    if (weightFromNone) {
+      console.log(
+        "         None %:" +
+          (Math.round((10000 * weightFromNone) / totalWeight) / 100 < 10
+            ? " "
+            : ""),
+        Math.round((10000 * weightFromNone) / totalWeight) / 100
+      );
+    }
     console.log(
-      "  None %:",
-      Math.round((10000 * weightFromNone) / totalWeight) / 100
-    );
-    console.log(
-      "  Common %:",
+      "       Common %:",
       Math.round((10000 * weightFromC) / totalWeight) / 100
     );
     console.log(
-      "  Rare %:",
+      "         Rare %:" +
+        (Math.round((10000 * weightFromR) / totalWeight) / 100 < 10 ? " " : ""),
       Math.round((10000 * weightFromR) / totalWeight) / 100
     );
     console.log(
-      "  Ultra Rare %:",
+      "   Ultra Rare %:" +
+        (Math.round((10000 * weightFromUR) / totalWeight) / 100 < 10
+          ? " "
+          : ""),
       Math.round((10000 * weightFromUR) / totalWeight) / 100
     );
+    if (weightFromSR) {
+      console.log(
+        "  Secret Rare %:" +
+          (Math.round((10000 * weightFromSR) / totalWeight) / 100 < 10
+            ? " "
+            : ""),
+        Math.round((10000 * weightFromSR) / totalWeight) / 100
+      );
+    }
+
+    if (weightFromC / totalWeight < 0.5) {
+      console.log("Not enough common", traitType);
+    }
+    if (weightFromR / totalWeight > 0.4) {
+      console.log("Too much rare", traitType);
+    }
   }
 }
 calculateRarityNameAndPercent();

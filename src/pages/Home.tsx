@@ -65,9 +65,8 @@ export const Home = () => {
 
                 @media (max-width: 760px) {
                   padding: 0 40px;
-                  padding-top: 0px;
+                  margin-top: 15px;
                   width: 100%;
-                  padding-bottom: 50px;
                 }
                 img {
                   display: inline-block;
@@ -78,23 +77,7 @@ export const Home = () => {
             >
               <img src={bobababyNFTlogo} alt="boba.baby" width="400" />
             </h1>
-            <div
-              css={css`
-                padding-top: 5px;
-                a {
-                  padding: 30px 12px;
-                }
-                a:hover {
-                  opacity: 0.9;
-                }
-                img {
-                  width: 40px;
-                  height: 40px;
-                }
-
-                text-align: center;
-              `}
-            >
+            <div>
               <Social />
             </div>
           </div>
@@ -468,9 +451,9 @@ export const Home = () => {
             font-weight: 500;
           }
           h3 {
-            margin-top: 40px;
+            margin-top: 30px;
             font-size: 25px;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             font-weight: 600;
           }
           p {
@@ -572,7 +555,7 @@ export const Home = () => {
           <p>
             Every BobaBaby trait was manually created by hand on a Pen Display.
             The traits were dynamically layered in a web browser, and the native
-            canvas resolution of each bobababy is 6000x6000 pixels.
+            canvas resolution of each BobaBaby is 6000x6000 pixels.
           </p>
           <h3>Are some BobaBabies more rare than others? </h3>
           <p>There are four rarity tiers for each trait:</p>

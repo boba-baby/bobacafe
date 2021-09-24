@@ -107,5 +107,8 @@ export const minRarity = (rarityName1: Rarity, rarityName2: Rarity): Rarity => {
   if (rarityName1 === "Rare" || rarityName2 === "Rare") {
     return "Rare";
   }
-  return "Ultra Rare";
+  if (rarityName1 === "Ultra Rare" || rarityName2 === "Ultra Rare") {
+    return "Ultra Rare";
+  }
+  return "Secret Rare";
 };

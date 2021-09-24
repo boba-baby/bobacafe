@@ -6,6 +6,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { ErrorScan } from "./pages/ErrorScan";
+import { Directory } from "./pages/Directory";
 
 function App() {
   return (
@@ -14,6 +15,10 @@ function App() {
         <Switch>
           <Route path="/" exact={true}>
             <Home />
+          </Route>
+
+          <Route path="/directory">
+            <Directory />
           </Route>
           <Route path="/errorscan">
             <ErrorScan />

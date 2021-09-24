@@ -1,5 +1,6 @@
 import { babyArtDefinition } from "../babyArtDefinition";
 import { FullBobaBaby, Trait, TraitType } from "../IArtDef";
+import { Roooool } from "../Roooooller";
 
 export const pullAtUniform = (traitType: TraitType): string => {
   return babyArtDefinition[traitType].traits[
@@ -108,4 +109,47 @@ export const generateLoadedRandom = (): FullBobaBaby => {
     Boba: pullAtUniform("Boba"),
     Background: pullAtUniform("Background"),
   };
+};
+
+export const rooooolRandomFromHash = (): FullBobaBaby => {
+  const fakeRandomHash = Buffer.from(
+    new Uint16Array([
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+      Math.floor(Math.random() * 65536),
+    ])
+  ).toString("hex");
+
+  const hash = fakeRandomHash;
+
+  return Roooool(hash);
 };
