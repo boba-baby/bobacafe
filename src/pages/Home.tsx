@@ -492,9 +492,15 @@ export const Home = () => {
 
           <h3>How are the traits for my BobaBaby determined?</h3>
           <p>
-            When you mint a BobaBaby, traits will be assigned randomly. Rarity
-            frequencies for each trait are displayed on this website. You will
-            be able to see your BobaBaby traits within 1 minute after minting.
+            When you mint a BobaBaby, traits will be assigned randomly based on
+            a provably fair hash scheme that is auditable. Rarity frequencies
+            for each trait are displayed on this website. You will be able to
+            see your BobaBaby traits within 1 minute after minting.
+          </p>
+          <p>
+            Some traits are incompatible with some other trait types. For
+            example, the Dough lid can only have dot eyes, and the Red Panda lid
+            is incompatible with blushes.
           </p>
           <h3>What are the technical details?</h3>
           <p>
@@ -555,7 +561,8 @@ export const Home = () => {
           <p>
             Every BobaBaby trait was manually created by hand on a Pen Display.
             The traits were dynamically layered in a web browser, and the native
-            canvas resolution of each BobaBaby is 6000x6000 pixels.
+            canvas resolution of each BobaBaby is 6000x6000 pixels. They were
+            all drawn by a single artist who is a full time artist.
           </p>
           <h3>Are some BobaBabies more rare than others? </h3>
           <p>There are four rarity tiers for each trait:</p>
@@ -784,7 +791,7 @@ export const Home = () => {
 
       <footer
         css={css`
-          max-width: 670px;
+          max-width: 672px;
           margin: 100px auto 0 auto;
           padding: 40px;
           p {
@@ -836,9 +843,9 @@ export const Home = () => {
           2021 BobaBabies. No rights reserved.
         </p>
         <p>
-          The BobaBabies displayed on this website are for display purposes
-          only, and are not indicative of actual odds during the mint. Please
-          refer to the Build & Explore tool for accurate drop rates.
+          The random sample of BobaBabies displayed on this website are for
+          display purposes only, and are not indicative of actual odds during
+          the mint. Please refer to actual % numbers for real drop rates.
         </p>
         <p>
           Non-fungible tokens are not an investment. BobaBabies have no inherent

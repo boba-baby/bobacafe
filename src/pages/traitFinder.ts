@@ -51,7 +51,8 @@ export const compoundedTraitFinder = (
 // For lids, it will sum up all the lids of the same variation
 export const rarityFinder = (
   traitType: TraitType,
-  traitName: string
+  traitName: string,
+  exact = false
 ): [number, Rarity] => {
   if (traitType === "Lid") {
     let total = 0;

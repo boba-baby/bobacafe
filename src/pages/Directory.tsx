@@ -1,6 +1,5 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { useEffect, useRef, useState } from "react";
 import { jsx, css } from "@emotion/react";
 
 import { getBBAddress } from "./allBBAddresses";

@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "importer": "./node_modules/.bin/ts-node-dev --respawn --project importer/tsconfig.json importer/importer.ts",
+    "importer": "./node_modules/.bin/ts-node-dev --respawn --ignore-watch 'importer/generatedTraits.ts' --project importer/tsconfig.json importer/importer.ts",
     "clean-importer": "rm -rf public/layers && rm -rf originals && ./node_modules/.bin/ts-node-dev --project importer/tsconfig.json importer/importer.ts",
     "push": "npm run clean-importer && git add public && git add src/babyArtDefinition.json && git commit -m 'update' && git push",
     "build": "react-scripts build",

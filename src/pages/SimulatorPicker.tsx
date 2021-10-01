@@ -27,7 +27,7 @@ export interface SimulatorPickerProps {
   initialSubTraitValue?: string;
   forcedTraitValue?: string;
   forcedSubTraitValue?: string;
-  onChange: (trait: string | [string, string]) => void;
+  onChange: (trait: string | [string, string], confirm: boolean) => void;
 }
 
 const showRarityFrequency = false;
@@ -61,12 +61,23 @@ const pickerAndLabelWrapper = css`
   }
 `;
 
+// Gets the first lid variant that is not secret rare
 const findFirstLidVariant = (traitName: string): string => {
-  const found = find(babyArtDefinition.Lid.traits, (trait) => {
-    return trait.traitName === traitName;
+  let found = find(babyArtDefinition.Lid.traits, (trait) => {
+    return (
+      trait.traitName === traitName &&
+      !trait.traitName.includes("Secret") &&
+      !(trait.subTraitName && trait.subTraitName.includes("Secret"))
+    );
   });
   if (found === undefined) {
-    throw new Error("found not found");
+    found = find(babyArtDefinition.Lid.traits, (trait) => {
+      return trait.traitName === traitName;
+    });
+
+    if (found === undefined) {
+      throw new Error("found actually not found");
+    }
   }
 
   if (found.subTraitName === undefined) {
@@ -266,9 +277,9 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
           if (focusedOptions.length) {
             preview = focusedOptions[0];
             if (props.traitType === "Lid") {
-              props.onChange([selectedTraitName, preview]);
+              props.onChange([selectedTraitName, preview], false);
             } else {
-              props.onChange(selectedTraitName);
+              props.onChange(selectedTraitName, false);
             }
           }
           focusedOptions = [];
@@ -288,7 +299,7 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
           //   inline: "start",
           // });
           if (focusedOptions.length) {
-            props.onChange([selectedTraitName, optionProps.label]);
+            props.onChange([selectedTraitName, optionProps.label], false);
           }
           focusedOptions = [];
         }, 2);
@@ -398,7 +409,7 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
               setTimeout(() => {
                 setSelectedSubTraitName(newSubTrait);
               }, 5);
-              props.onChange([selectedTraitName, newSubTrait]);
+              props.onChange([selectedTraitName, newSubTrait], true);
             }}
             menuShouldScrollIntoView={false}
             menuShouldBlockScroll={false}
@@ -407,12 +418,12 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
             }
             onMenuClose={() => {
               if (props.traitType === "Lid") {
-                props.onChange([
-                  selectedTraitName,
-                  selectedSubTraitName as string,
-                ]);
+                props.onChange(
+                  [selectedTraitName, selectedSubTraitName as string],
+                  true
+                );
               } else {
-                props.onChange(selectedTraitName);
+                props.onChange(selectedTraitName, true);
               }
             }}
             isLoading={true}
@@ -450,12 +461,12 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
         if (focusedOptions.length) {
           preview = focusedOptions[0];
           if (props.traitType === "Lid") {
-            props.onChange([preview, findFirstLidVariant(preview)]);
+            props.onChange([preview, findFirstLidVariant(preview)], false);
           } else {
             const traitFound = rarityFinder(props.traitType, preview);
             if (traitFound && traitFound[1] === "Secret Rare") {
             } else {
-              props.onChange(preview);
+              props.onChange(preview, false);
             }
           }
         }
@@ -477,15 +488,15 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
         // });
         if (focusedOptions.length) {
           if (props.traitType === "Lid") {
-            props.onChange([
-              optionProps.label,
-              findFirstLidVariant(optionProps.label),
-            ]);
+            props.onChange(
+              [optionProps.label, findFirstLidVariant(optionProps.label)],
+              false
+            );
           } else {
             const traitFound = rarityFinder(props.traitType, optionProps.label);
             if (traitFound && traitFound[1] === "Secret Rare") {
             } else {
-              props.onChange(optionProps.label);
+              props.onChange(optionProps.label, false);
             }
           }
         }
@@ -600,11 +611,11 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
                 setSelectedTraitName(newTrait);
                 setSelectedSubTraitName(findFirstLidVariant(newTrait));
               }, 5);
-              props.onChange([newTrait, findFirstLidVariant(newTrait)]);
+              props.onChange([newTrait, findFirstLidVariant(newTrait)], true);
             } else {
               const traitFound = rarityFinder(props.traitType, newTrait);
               if (traitFound && traitFound[1] === "Secret Rare") {
-                props.onChange(selectedTraitName);
+                props.onChange(selectedTraitName, true);
                 alert(
                   "Secret rare traits can not be previewed. They will be revealed after the mint goes live."
                 );
@@ -612,7 +623,7 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
                 setTimeout(() => {
                   setSelectedTraitName(newTrait);
                 }, 5);
-                props.onChange(newTrait);
+                props.onChange(newTrait, true);
               }
             }
           }}
@@ -623,12 +634,12 @@ export const SimulatorPicker = React.memo((props: SimulatorPickerProps) => {
           }
           onMenuClose={() => {
             if (props.traitType === "Lid") {
-              props.onChange([
-                selectedTraitName,
-                selectedSubTraitName as string,
-              ]);
+              props.onChange(
+                [selectedTraitName, selectedSubTraitName as string],
+                true
+              );
             } else {
-              props.onChange(selectedTraitName);
+              props.onChange(selectedTraitName, true);
             }
           }}
           isLoading={true}

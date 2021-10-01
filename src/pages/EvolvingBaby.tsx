@@ -9,12 +9,14 @@ import {
   pullAtUniform,
   pullAtUniformWithExclude,
   pullAtUniformWithMoreNoneChance,
-  pullLidAtUniform,
-  pullLidVariationAtUniform,
+  pullNonSecretLidAtUniform,
+  pullNonSecretLidVariationAtUniform,
+  tryUntilNonSecret,
 } from "./randomUtils";
 import { FullBobaBaby, TraitTuple, TraitType } from "../IArtDef";
 import { traitFinder } from "./traitFinder";
 import useIntersectionObserver from "@react-hook/intersection-observer";
+import { Rectifier } from "../Roooooller";
 
 const initialBaby = generateLoadedRandom();
 
@@ -85,12 +87,12 @@ const pickRandomTraitForType = (
     if (lidForVariation) {
       return {
         traitType: "Lid",
-        trait: pullLidVariationAtUniform(lidForVariation),
+        trait: pullNonSecretLidVariationAtUniform(lidForVariation),
       };
     } else {
       return {
         traitType: "Lid",
-        trait: pullLidAtUniform(),
+        trait: pullNonSecretLidAtUniform(),
       };
     }
   }
@@ -98,43 +100,51 @@ const pickRandomTraitForType = (
   let chosenTrait = "";
   switch (traitType) {
     case "Background": {
-      chosenTrait = pullAtUniform("Background");
+      chosenTrait = tryUntilNonSecret(() => pullAtUniform("Background"));
       break;
     }
     case "Cup": {
-      chosenTrait = pullAtOdds("Cup");
+      chosenTrait = tryUntilNonSecret(() => pullAtOdds("Cup"));
       break;
     }
     case "Drink": {
-      chosenTrait = pullAtUniform("Drink");
+      chosenTrait = tryUntilNonSecret(() => pullAtUniform("Drink"));
       break;
     }
     case "Blush": {
-      chosenTrait = pullAtUniform("Blush");
+      chosenTrait = tryUntilNonSecret(() => pullAtUniform("Blush"));
       break;
     }
     case "Straw": {
-      chosenTrait = pullAtUniformWithExclude("Straw", "None");
+      chosenTrait = tryUntilNonSecret(() =>
+        pullAtUniformWithExclude("Straw", "None")
+      );
       break;
     }
     case "Eyes": {
-      chosenTrait = pullAtUniform("Eyes");
+      chosenTrait = tryUntilNonSecret(() => pullAtUniform("Eyes"));
       break;
     }
     case "Boba": {
-      chosenTrait = pullAtUniform("Boba");
+      chosenTrait = tryUntilNonSecret(() => pullAtUniform("Boba"));
       break;
     }
     case "Glasses": {
-      chosenTrait = pullAtUniformWithMoreNoneChance("Glasses", 0.4);
+      chosenTrait = tryUntilNonSecret(() =>
+        pullAtUniformWithMoreNoneChance("Glasses", 0.4)
+      );
       break;
     }
     case "Accessory": {
-      chosenTrait = pullAtUniformWithMoreNoneChance("Accessory", 0.4);
+      chosenTrait = tryUntilNonSecret(() =>
+        pullAtUniformWithMoreNoneChance("Accessory", 0.4)
+      );
       break;
     }
     case "Sticker": {
-      chosenTrait = pullAtUniformWithMoreNoneChance("Sticker", 0.4);
+      chosenTrait = tryUntilNonSecret(() =>
+        pullAtUniformWithMoreNoneChance("Sticker", 0.4)
+      );
       break;
     }
     default: {
@@ -302,7 +312,7 @@ export const EvolvingBaby = () => {
         });
         n = 0;
       }
-    }, 100);
+    }, 80);
     return () => clearInterval(id);
   });
 
@@ -359,7 +369,7 @@ export const EvolvingBaby = () => {
 
       <div css={css``}>
         <BobaBabyCanvas
-          baby={babySpecs}
+          baby={Rectifier(babySpecs)}
           small={true}
           noBackground={true}
           noWatermark={true}

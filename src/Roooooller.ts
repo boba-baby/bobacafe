@@ -27,7 +27,7 @@ const getTraitWithPoint = (traits: Array<Trait>, point: number) => {
   return traits[traits.length - 1];
 };
 
-export const Roooool = (sha256hash: string): FullBobaBaby => {
+export const RooooolWithoutRectifier = (sha256hash: string): FullBobaBaby => {
   if (sha256hash.length !== 64) {
     throw new Error("hash needs to be 64 characters");
   }
@@ -97,10 +97,39 @@ export const Roooool = (sha256hash: string): FullBobaBaby => {
   };
 };
 
+export const Roooool = (sha256hash: string): FullBobaBaby => {
+  return Rectifier(RooooolWithoutRectifier(sha256hash));
+};
+
+// Some traits are incompatible with other traits. For example, the Dough can only have dot eyes, and the CRT has special eyes
+export const Rectifier = (baby: FullBobaBaby): FullBobaBaby => {
+  const newBaby = Object.assign({}, baby);
+  newBaby.Lid = [newBaby.Lid[0], newBaby.Lid[1]];
+
+  if (newBaby.Lid[0] === "Dough" || newBaby.Lid[0] === "Secret.1") {
+    newBaby.Eyes = "Dots";
+  }
+
+  if (
+    newBaby.Lid[0] === "Red Panda" ||
+    newBaby.Lid[0] === "Cow" ||
+    newBaby.Lid[0] === "Bull" ||
+    newBaby.Lid[0] === "Ox" ||
+    newBaby.Lid[0] === "Unicorn" ||
+    newBaby.Lid[0] === "Whale" ||
+    newBaby.Lid[0] === "Pumpkin" ||
+    newBaby.Lid[0] === "Ice Cream" ||
+    newBaby.Lid[0] === "Horse"
+  ) {
+    newBaby.Blush = "None";
+  }
+
+  return newBaby;
+};
 // TODO Incompatibility system
 
 const RooooollerUnitTest = () => {
-  const zeroRoooool = Roooool(
+  const zeroRoooool = RooooolWithoutRectifier(
     "0000000000000000000000000000000000000000000000000000000000000000"
   );
   if (
@@ -125,7 +154,7 @@ const RooooollerUnitTest = () => {
     throw new Error("zero roooool wrong");
   }
 
-  const almostZero = Roooool(
+  const almostZero = RooooolWithoutRectifier(
     "0000010000010000010000010000010000010000010000010000010000010001"
   );
 
@@ -152,9 +181,9 @@ const RooooollerUnitTest = () => {
     throw new Error("almost zero roooool wrong");
   }
 
-  // Roooool("2222222222222222222222222222222222222222222222222222222222222222");
+  // RooooolWithoutRectifier("2222222222222222222222222222222222222222222222222222222222222222");
 
-  const almostMaxRoooool = Roooool(
+  const almostMaxRoooool = RooooolWithoutRectifier(
     "fffffefffffefffffefffffefffffefffffefffffefffffefffffefffffefffe"
   );
   if (
@@ -209,7 +238,7 @@ const RooooollerUnitTest = () => {
     throw new Error("max roooool wrong");
   }
 
-  const maxRoooool = Roooool(
+  const maxRoooool = RooooolWithoutRectifier(
     "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
   );
   if (

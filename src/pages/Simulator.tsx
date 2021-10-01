@@ -5,10 +5,11 @@ import { jsx, css } from "@emotion/react";
 import { BobaBabyCanvas } from "./BobaBabyCanvas";
 import { FullBobaBaby, TraitType } from "../IArtDef";
 import { IsolatedPicker } from "./IsolatedPicker";
-import { generateLoadedRandom, rooooolRandomFromHash } from "./randomUtils";
+import { generateLoadedRandom } from "./randomUtils";
 import { useElementSize } from "usehooks-ts";
 import { Tappable } from "./Tappable";
 import { ActualCanvas } from "./ActualCanvas";
+import { Rectifier } from "../Roooooller";
 
 export type PickerLayout = "table" | "2x" | "3x" | "stacked";
 
@@ -26,7 +27,7 @@ const initialBaby = generateLoadedRandom();
 //   Boba: initialBaby.Boba,
 //   Background: initialBaby.Background,
 // }
-const initialNextBaby = generateLoadedRandom();
+const initialNextBaby = Rectifier(generateLoadedRandom());
 type UpdateStackItem = {
   traitType: TraitType;
   traitValue: string;
@@ -81,6 +82,7 @@ export const Simulator = () => {
     initialTrait: string,
     initialSubTrait?: string
   ) => {
+    // console.log("Closure created", babySpecs, intendedBabySpecs);
     return (
       <IsolatedPicker
         traitType={traitType}
@@ -96,17 +98,32 @@ export const Simulator = () => {
             ? updateStack[0].subTraitValue
             : undefined
         }
-        onChange={function (trait): void {
+        onChange={function (trait, confirm): void {
+          // console.log("Another", babySpecs);
+          // if (confirm) {
+          //   // console.log("Confirm");
+          //   setIntendedBabySpecs(() =>
+          //     Rectifier({
+          //       ...babySpecs,
+          //       [traitType]: trait,
+          //     })
+          //   );
           setBabySpecs((prevState) => ({ ...prevState, [traitType]: trait }));
           setIntendedBabySpecs((prevState) => ({
             ...prevState,
             [traitType]: trait,
           }));
+          // } else {
+          // setBabySpecs(() =>
+          //   Rectifier({ ...intendedBabySpecs, [traitType]: trait })
+          // );
+          // }
         }}
         pickerLayout={pickerLayout}
       />
     );
   };
+  // console.log(babySpecs, intendedBabySpecs);
 
   let pickerLayout: PickerLayout = "table";
   if (width && height) {
@@ -167,7 +184,7 @@ export const Simulator = () => {
           }}
         >
           <BobaBabyCanvas
-            baby={babySpecs}
+            baby={Rectifier(babySpecs)}
             small={false}
             thecss={css`
               /* display: block; */
@@ -227,8 +244,8 @@ export const Simulator = () => {
                 cursor: pointer;
               `}
               onClick={() => {
-                setIntendedBabySpecs(nextBabySpecs);
-                setNextBabySpecs(generateLoadedRandom());
+                setIntendedBabySpecs(Rectifier(nextBabySpecs));
+                setNextBabySpecs(Rectifier(generateLoadedRandom()));
                 setUpdateStack([
                   {
                     traitType: "Lid",
@@ -424,8 +441,8 @@ export const Simulator = () => {
               display: none;
             `}
           >
-            <BobaBabyCanvas baby={intendedBabySpecs} small={false} />
-            <BobaBabyCanvas baby={nextBabySpecs} small={false} />
+            <BobaBabyCanvas baby={Rectifier(intendedBabySpecs)} small={false} />
+            <BobaBabyCanvas baby={Rectifier(nextBabySpecs)} small={false} />
           </div>
           <div
             css={css`
@@ -438,28 +455,28 @@ export const Simulator = () => {
             `}
           >
             <ActualCanvas
-              baby={intendedBabySpecs}
+              baby={Rectifier(intendedBabySpecs)}
               showDownloadLink={false}
               setFavicon={true}
               resolution={240}
             />
             <ActualCanvas
-              baby={intendedBabySpecs}
+              baby={Rectifier(intendedBabySpecs)}
               showDownloadLink={true}
               resolution={240}
             />
             <ActualCanvas
-              baby={intendedBabySpecs}
+              baby={Rectifier(intendedBabySpecs)}
               showDownloadLink={true}
               resolution={960}
             />
             <ActualCanvas
-              baby={intendedBabySpecs}
+              baby={Rectifier(intendedBabySpecs)}
               showDownloadLink={true}
               resolution={2400}
             />
             <ActualCanvas
-              baby={intendedBabySpecs}
+              baby={Rectifier(intendedBabySpecs)}
               showDownloadLink={true}
               resolution={6000}
             />

@@ -1,6 +1,6 @@
 import { babyArtDefinition } from "../babyArtDefinition";
 import { FullBobaBaby, Trait, TraitType } from "../IArtDef";
-import { Roooool } from "../Roooooller";
+import { Rectifier, Roooool } from "../Roooooller";
 
 export const pullAtUniform = (traitType: TraitType): string => {
   return babyArtDefinition[traitType].traits[
@@ -33,10 +33,34 @@ export const pullAtUniformWithMoreNoneChance = (
   return pullAtUniform(traitType);
 };
 
+export const tryUntilNonSecret = (puller: () => string): string => {
+  let pull = puller();
+  while (pull.includes("Secret")) {
+    // console.log("Got secret. Repulling", pull);
+    pull = puller();
+  }
+  return pull;
+};
+
 export const pullLidAtUniform = (): Trait => {
   return babyArtDefinition.Lid.traits[
     Math.floor(Math.random() * babyArtDefinition.Lid.traits.length)
   ];
+};
+
+export const pullNonSecretLidAtUniform = (): Trait => {
+  let lid = pullLidAtUniform();
+
+  for (let i = 0; i < 10; i++) {
+    if (
+      !lid.traitName.includes("Secret") &&
+      !lid.subTraitName!!.includes("Secret")
+    ) {
+      return lid;
+    }
+    lid = pullLidAtUniform();
+  }
+  return lid;
 };
 export const pullLidVariationAtUniform = (lidTraitName: string): Trait => {
   const sameTypeLids: Trait[] = [];
@@ -46,6 +70,28 @@ export const pullLidVariationAtUniform = (lidTraitName: string): Trait => {
     }
   });
   return sameTypeLids[Math.floor(Math.random() * sameTypeLids.length)];
+};
+
+export const pullNonSecretLidVariationAtUniform = (
+  lidTraitName: string
+): Trait => {
+  const sameTypeLids: Trait[] = [];
+  babyArtDefinition.Lid.traits.forEach((trait) => {
+    if (trait.traitName === lidTraitName) {
+      sameTypeLids.push(trait);
+    }
+  });
+  let lid = sameTypeLids[Math.floor(Math.random() * sameTypeLids.length)];
+  for (let i = 0; i < 10; i++) {
+    if (
+      !lid.traitName.includes("Secret") &&
+      !lid.subTraitName!!.includes("Secret")
+    ) {
+      return lid;
+    }
+    lid = sameTypeLids[Math.floor(Math.random() * sameTypeLids.length)];
+  }
+  return lid;
 };
 
 // More realistic
@@ -63,52 +109,72 @@ export const pullAtOdds = (traitType: TraitType) => {
 };
 
 const deduplicateLids: Record<string, boolean> = {};
+
+export const pickLoadedLid = (): Trait => {
+  let found = false;
+
+  let randomLid: Trait;
+  let attempt = 0;
+  while (!found && attempt < 10) {
+    randomLid =
+      babyArtDefinition.Lid.traits[
+        Math.floor(Math.random() * babyArtDefinition.Lid.traits.length)
+      ];
+
+    attempt++;
+
+    if (
+      !randomLid.traitName.includes("Secret") &&
+      !randomLid.subTraitName!!.includes("Secret")
+    ) {
+      found = true;
+    }
+  }
+
+  deduplicateLids[randomLid!!.traitName + "-" + randomLid!!.subTraitName] =
+    true;
+
+  return randomLid!!;
+};
+
 // impure
 export const generateLoadedRandom = (): FullBobaBaby => {
-  let randomLid =
-    babyArtDefinition.Lid.traits[
-      Math.floor(Math.random() * babyArtDefinition.Lid.traits.length)
-    ];
+  let randomLid = pickLoadedLid();
 
   // reroll
   if (deduplicateLids[randomLid.traitName + "*" + randomLid.subTraitName]) {
-    randomLid =
-      babyArtDefinition.Lid.traits[
-        Math.floor(Math.random() * babyArtDefinition.Lid.traits.length)
-      ];
+    randomLid = pickLoadedLid();
   }
-
   // reroll
   if (deduplicateLids[randomLid.traitName + "*" + randomLid.subTraitName]) {
-    randomLid =
-      babyArtDefinition.Lid.traits[
-        Math.floor(Math.random() * babyArtDefinition.Lid.traits.length)
-      ];
+    randomLid = pickLoadedLid();
   }
-
   // reroll
   if (deduplicateLids[randomLid.traitName + "*" + randomLid.subTraitName]) {
-    randomLid =
-      babyArtDefinition.Lid.traits[
-        Math.floor(Math.random() * babyArtDefinition.Lid.traits.length)
-      ];
+    randomLid = pickLoadedLid();
   }
 
   deduplicateLids[randomLid.traitName + "*" + randomLid.subTraitName] = true;
-  return {
+  return Rectifier({
     Lid: [randomLid.traitName, randomLid.subTraitName!!],
 
-    Straw: pullAtUniformWithExclude("Straw", "None"),
-    Accessory: pullAtUniformWithMoreNoneChance("Accessory", 0.4),
-    Eyes: pullAtUniform("Eyes"),
-    Glasses: pullAtUniformWithMoreNoneChance("Glasses", 0.4),
-    Blush: pullAtUniform("Blush"),
-    Sticker: pullAtUniformWithMoreNoneChance("Sticker", 0.4),
-    Cup: pullAtOdds("Cup"),
-    Drink: pullAtUniform("Drink"),
-    Boba: pullAtUniform("Boba"),
-    Background: pullAtUniform("Background"),
-  };
+    Straw: tryUntilNonSecret(() => pullAtUniformWithExclude("Straw", "None")),
+    Accessory: tryUntilNonSecret(() =>
+      pullAtUniformWithMoreNoneChance("Accessory", 0.5)
+    ),
+    Eyes: tryUntilNonSecret(() => pullAtUniform("Eyes")),
+    Glasses: tryUntilNonSecret(() =>
+      pullAtUniformWithMoreNoneChance("Glasses", 0.5)
+    ),
+    Blush: tryUntilNonSecret(() => pullAtUniform("Blush")),
+    Sticker: tryUntilNonSecret(() =>
+      pullAtUniformWithMoreNoneChance("Sticker", 0.5)
+    ),
+    Cup: tryUntilNonSecret(() => pullAtOdds("Cup")),
+    Drink: tryUntilNonSecret(() => pullAtUniform("Drink")),
+    Boba: tryUntilNonSecret(() => pullAtUniform("Boba")),
+    Background: tryUntilNonSecret(() => pullAtUniform("Background")),
+  });
 };
 
 export const rooooolRandomFromHash = (): FullBobaBaby => {
