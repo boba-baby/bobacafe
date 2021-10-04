@@ -10,6 +10,7 @@ import { useElementSize } from "usehooks-ts";
 import { Tappable } from "./Tappable";
 import { ActualCanvas } from "./ActualCanvas";
 import { Rectifier } from "../Roooooller";
+import { babyArtDefinition } from "../babyArtDefinition";
 
 export type PickerLayout = "table" | "2x" | "3x" | "stacked";
 
@@ -54,7 +55,7 @@ export const Simulator = () => {
           n++;
           if (
             updateStack.length &&
-            (n > 3 || updateStack.length === 1 || updateStack.length === 12)
+            (n > 3 || updateStack.length === 1 || updateStack.length === 11)
           ) {
             setUpdateStack((oldUpdateStack) => {
               if (oldUpdateStack.length) {
@@ -81,7 +82,6 @@ export const Simulator = () => {
             });
           }
         }
-        console.log(n);
       }, 11.11);
       return () => clearInterval(interval);
     }

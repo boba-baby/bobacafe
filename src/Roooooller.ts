@@ -106,7 +106,11 @@ export const Rectifier = (baby: FullBobaBaby): FullBobaBaby => {
   const newBaby = Object.assign({}, baby);
   newBaby.Lid = [newBaby.Lid[0], newBaby.Lid[1]];
 
-  if (newBaby.Lid[0] === "Dough" || newBaby.Lid[0] === "Secret.1") {
+  if (
+    newBaby.Lid[0] === "Dough" ||
+    newBaby.Lid[0] === "Secret.1" ||
+    newBaby.Lid[0] === "Alien"
+  ) {
     newBaby.Eyes = "Dots";
   }
 
