@@ -1,6 +1,7 @@
 /* eslint-disable no-loop-func */
 import * as fs from "fs";
 import path from "path";
+import gm from "gm";
 import sharp from "sharp";
 
 import { sync as mkdirpSync } from "mkdirp";
@@ -115,6 +116,38 @@ function mkdirpMemoized(localPath: string) {
 let done = 0;
 let total = 0;
 
+// sharp doesn't work with our 16 bit pngs, so we use gm to do this
+// ... but gm is suuuper computationally heavy, so we have to do this in parallel or else my computer explodes
+async function resizeWithGoodMorning(
+  original: string,
+  dest: string,
+  dimensions: number[]
+): Promise<void> {
+  total += dimensions.length;
+  for (const dimension of dimensions) {
+    await new Promise((resolve, reject) => {
+      gm(original)
+        .background("transparent")
+        .bitdepth(16)
+        .gravity("Center")
+        .extent(6000, 6000)
+        .resize(dimension, dimension)
+        .write(dest.replace(".png", `.${dimension}.png`), function (err) {
+          if (err) reject(err);
+          done++;
+          console.log(`${done}/${total}`, [
+            dest
+              .replace(".png", `.${dimension}.png`)
+              .replace("./public/layers/", ""),
+            "%",
+          ]);
+          resolve(void 0);
+        });
+    });
+  }
+  return;
+}
+
 // If resizing to less than 400x400, it is used as a progressive loader, so we use
 // palette for smaller file size
 // 6k dimension is implicit
@@ -208,25 +241,23 @@ async function createThumbnail(src: string, dest: string) {
     buffer = await sharp(buffer).trim(1).toBuffer();
   } catch (e) {}
 
-  return (
-    sharp(buffer)
-      .resize({ width: 120, height: 120, fit: "inside" })
-      .toFormat("png")
-      .png({ palette: true, compressionLevel: 9 })
-      // .png({ palette: true })
-      .toFile(destWithExtension)
-      .then((info) => {
-        done++;
-        console.log(`${done}/${total}`, [
-          destWithExtension.replace("./public/layers/", ""),
-          info.size,
-        ]);
-      })
-  );
+  return sharp(buffer)
+    .resize({ width: 120, height: 120, fit: "inside" })
+    .toFormat("png")
+    .png({ palette: true, compressionLevel: 9 })
+    .toFile(destWithExtension)
+    .then((info) => {
+      done++;
+      console.log(`${done}/${total}`, [
+        destWithExtension.replace("./public/layers/", ""),
+        info.size,
+      ]);
+    });
 }
 // Copy the file. Skip if size is the same
-function copyAndResizeSync(
+async function copyAndResizeSync(
   src: string,
+  tmp: string,
   original: string,
   dest: string,
   isBackground: boolean
@@ -248,11 +279,21 @@ function copyAndResizeSync(
   }
   mkdirpMemoized(dest);
   mkdirpMemoized(original);
+  mkdirpMemoized(tmp);
+
+  total++;
+  await fs.copyFileSync(src, tmp);
+  done++;
+  console.log(`${done}/${total}`, tmp);
 
   let all = [];
   // small images are displayed at 240x240px
   // this ensures a multiple of 4 for cleaner division
-  all.push(extendTo6KThenResize(src, dest, [2400, 960, 240]));
+  if (isBackground) {
+    all.push(resizeWithGoodMorning(tmp, dest, [6000, 2400, 960, 240]));
+  } else {
+    all.push(extendTo6KThenResize(tmp, dest, [2400, 960, 240]));
+  }
 
   all.push(createThumbnail(src, dest));
 
@@ -314,6 +355,7 @@ function processFile(
   // console.log(localPath);
   copyAndResizeSync(
     `${sourcePNGs}/${localPath}`,
+    `/tmp/layers/${localPath}`,
     `./originals/layers/${localPath}`,
     `./public/layers/${localPath}`,
     layerName === "Background"
@@ -500,16 +542,32 @@ function setStickerRarity(rarity: number, traitName: AllStickerTraits) {
   setRarity("Sticker", rarity, traitName);
 }
 
-setBackgroundRarity(0.25, "Blue Pink Clouds");
-setBackgroundRarity(0.5, "Blue White Bokeh");
-setBackgroundRarity(0.5, "Orange White Bokeh");
-setBackgroundRarity(0.5, "Pink White Bokeh");
+setBackgroundRarity(0.2, "Blue White Bokeh");
+setBackgroundRarity(0.5, "Gradient Blue Purple");
+setBackgroundRarity(0.2, "Gradient Dark Blue");
+setBackgroundRarity(0.2, "Gradient Dark Purple");
+setBackgroundRarity(0.2, "Gradient Dark Teal");
+setBackgroundRarity(0.5, "Gradient Green Blue");
+setBackgroundRarity(0.5, "Gradient Orange Green Teal");
+setBackgroundRarity(0.5, "Gradient Orange Pink");
+setBackgroundRarity(0.5, "Gradient Pink Blue");
+setBackgroundRarity(0.5, "Gradient Pink Orange Green");
+setBackgroundRarity(0.5, "Gradient Sunset");
+setBackgroundRarity(0.5, "Gradient Yellow Green");
+setBackgroundRarity(0.2, "Orange White Bokeh");
+setBackgroundRarity(0.2, "Pink White Bokeh");
 setBackgroundRarity(1, "Plain Blue");
+setBackgroundRarity(1, "Plain Blue Gray");
+setBackgroundRarity(1, "Plain Bright Orange");
+setBackgroundRarity(1, "Plain Coral");
 setBackgroundRarity(1, "Plain Green");
+setBackgroundRarity(1, "Plain Light Teal");
+setBackgroundRarity(0.5, "Plain Magenta");
+setBackgroundRarity(1, "Plain Peridot");
 setBackgroundRarity(1, "Plain Pink");
 setBackgroundRarity(1, "Plain Purple");
 setBackgroundRarity(1, "Plain Yellow");
-setBackgroundRarity(0.5, "Purple Pink Bokeh");
+setBackgroundRarity(0.2, "Purple Pink Bokeh");
 
 setCupRarity(0.003, "Invisible");
 setCupRarity(0.003, "Opaque White");
@@ -589,8 +647,6 @@ setLidRarity(1, "Bear-Brown");
 setLidRarity(1, "Bear-Polar");
 setLidRarity(1, "Bear-Purple");
 setLidRarity(1, "Bear-Yellow");
-setLidRarity(0.1, "Boba-Black");
-setLidRarity(0.1, "Boba-White");
 setLidRarity(0.3, "Bread Roll-Plain");
 setLidRarity(0.3, "Bread Roll-Taro");
 setLidRarity(1, "Bull-Gold Ring");
@@ -609,10 +665,9 @@ setLidRarity(0.3, "Cupcake-Pink");
 setLidRarity(0.3, "Cupcake-Pink Sprinkles");
 setLidRarity(0.3, "Cupcake-Purple Sprinkles");
 setLidRarity(0.3, "Cupcake-Rainbow");
-setLidRarity(1, "Dough-Blue");
 setLidRarity(0.1, "Dough-Pink");
 setLidRarity(0.1, "Dough-Secret");
-setLidRarity(1, "Dough-White");
+setLidRarity(0.1, "Dough-White");
 setLidRarity(0.1, "Dragon-Green");
 setLidRarity(0.1, "Dragon-Red");
 setLidRarity(1, "Ghost-Pink");

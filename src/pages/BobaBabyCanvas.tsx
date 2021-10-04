@@ -70,7 +70,7 @@ const artLayer = css`
 `;
 
 const artLayerBackground = css`
-  transition: 0.16s opacity;
+  transition: 0.2s opacity;
 `;
 const artLayerHide = css`
   transition: 0s opacity !important;

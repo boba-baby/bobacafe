@@ -47,31 +47,45 @@ export const Simulator = () => {
   const { width, height } = useElementSize(controlsRef);
 
   useEffect(() => {
-    const interval = setTimeout(() => {
-      if (updateStack.length) {
-        setUpdateStack((oldUpdateStack) => {
-          if (oldUpdateStack.length) {
-            const first = oldUpdateStack[0];
-            if (first) {
-              if (first.traitType === "Lid") {
-                setBabySpecs((prevState) => ({
-                  ...prevState,
-                  [first.traitType]: [first.traitValue, first.subTraitValue],
-                }));
-              } else {
-                setBabySpecs((prevState) => ({
-                  ...prevState,
-                  [first.traitType]: first.traitValue,
-                }));
+    let n = 0;
+    if (updateStack.length) {
+      const interval = setInterval(() => {
+        if (updateStack.length) {
+          n++;
+          if (
+            updateStack.length &&
+            (n > 3 || updateStack.length === 1 || updateStack.length === 12)
+          ) {
+            setUpdateStack((oldUpdateStack) => {
+              if (oldUpdateStack.length) {
+                const first = oldUpdateStack[0];
+                if (first) {
+                  if (first.traitType === "Lid") {
+                    setBabySpecs((prevState) => ({
+                      ...prevState,
+                      [first.traitType]: [
+                        first.traitValue,
+                        first.subTraitValue,
+                      ],
+                    }));
+                  } else {
+                    setBabySpecs((prevState) => ({
+                      ...prevState,
+                      [first.traitType]: first.traitValue,
+                    }));
+                  }
+                }
               }
-            }
-          }
 
-          return oldUpdateStack.slice(1);
-        });
-      }
-    }, 33.4);
-    return () => clearTimeout(interval);
+              return oldUpdateStack.slice(1);
+            });
+          }
+        }
+        console.log(n);
+      }, 11.11);
+      return () => clearInterval(interval);
+    }
+    return () => null;
   }, [updateStack]);
 
   const babyCanvasContainerRef = useRef<HTMLDivElement>(null);

@@ -1,24 +1,56 @@
 import { TraitType } from "../src/IArtDef";
 
 export type AllBackgroundTraits = 
-  | "Blue Pink Clouds"
   | "Blue White Bokeh"
+  | "Gradient Blue Purple"
+  | "Gradient Dark Blue"
+  | "Gradient Dark Purple"
+  | "Gradient Dark Teal"
+  | "Gradient Green Blue"
+  | "Gradient Orange Green Teal"
+  | "Gradient Orange Pink"
+  | "Gradient Pink Blue"
+  | "Gradient Pink Orange Green"
+  | "Gradient Sunset"
+  | "Gradient Yellow Green"
   | "Orange White Bokeh"
   | "Pink White Bokeh"
   | "Plain Blue"
+  | "Plain Blue Gray"
+  | "Plain Bright Orange"
+  | "Plain Coral"
   | "Plain Green"
+  | "Plain Light Teal"
+  | "Plain Magenta"
+  | "Plain Peridot"
   | "Plain Pink"
   | "Plain Purple"
   | "Plain Yellow"
   | "Purple Pink Bokeh";
 
 export const BackgroundTraits = new Set([
-  "Blue Pink Clouds",
   "Blue White Bokeh",
+  "Gradient Blue Purple",
+  "Gradient Dark Blue",
+  "Gradient Dark Purple",
+  "Gradient Dark Teal",
+  "Gradient Green Blue",
+  "Gradient Orange Green Teal",
+  "Gradient Orange Pink",
+  "Gradient Pink Blue",
+  "Gradient Pink Orange Green",
+  "Gradient Sunset",
+  "Gradient Yellow Green",
   "Orange White Bokeh",
   "Pink White Bokeh",
   "Plain Blue",
+  "Plain Blue Gray",
+  "Plain Bright Orange",
+  "Plain Coral",
   "Plain Green",
+  "Plain Light Teal",
+  "Plain Magenta",
+  "Plain Peridot",
   "Plain Pink",
   "Plain Purple",
   "Plain Yellow",
@@ -185,8 +217,6 @@ export type AllLidTraits =
   | "Bear-Polar"
   | "Bear-Purple"
   | "Bear-Yellow"
-  | "Boba-Black"
-  | "Boba-White"
   | "Bread Roll-Plain"
   | "Bread Roll-Taro"
   | "Bull-Gold Ring"
@@ -205,7 +235,6 @@ export type AllLidTraits =
   | "Cupcake-Pink Sprinkles"
   | "Cupcake-Purple Sprinkles"
   | "Cupcake-Rainbow"
-  | "Dough-Blue"
   | "Dough-Pink"
   | "Dough-Secret"
   | "Dough-White"
@@ -301,8 +330,6 @@ export const LidTraits = new Set([
   "Bear-Polar",
   "Bear-Purple",
   "Bear-Yellow",
-  "Boba-Black",
-  "Boba-White",
   "Bread Roll-Plain",
   "Bread Roll-Taro",
   "Bull-Gold Ring",
@@ -321,7 +348,6 @@ export const LidTraits = new Set([
   "Cupcake-Pink Sprinkles",
   "Cupcake-Purple Sprinkles",
   "Cupcake-Rainbow",
-  "Dough-Blue",
   "Dough-Pink",
   "Dough-Secret",
   "Dough-White",

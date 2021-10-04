@@ -173,7 +173,7 @@ export const generateLoadedRandom = (): FullBobaBaby => {
     Cup: tryUntilNonSecret(() => pullAtOdds("Cup")),
     Drink: tryUntilNonSecret(() => pullAtUniform("Drink")),
     Boba: tryUntilNonSecret(() => pullAtUniform("Boba")),
-    Background: tryUntilNonSecret(() => pullAtUniform("Background")),
+    Background: tryUntilNonSecret(() => pullAtOdds("Background")), // show the simpler ones first, because some exotic ones really stand out
   });
 };
 
