@@ -25,6 +25,7 @@ export type TraitCategory = {
 };
 export type TraitType =
   | "Background"
+  | "Overlay"
   | "Cup"
   | "Drink"
   | "Blush"
@@ -38,6 +39,7 @@ export type TraitType =
 
 export const allTraitTypes: TraitType[] = [
   "Background",
+  "Overlay",
   "Cup",
   "Drink",
   "Blush",
@@ -56,6 +58,7 @@ export type BabyArtDefinition = Record<TraitType, TraitCategory>;
 
 export type FullBobaBaby = {
   Background: string;
+  Overlay: string;
   Cup: string;
   Drink: string;
   Blush: string;

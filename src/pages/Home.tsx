@@ -518,7 +518,15 @@ export const Home = () => {
             .
           </p>
           <h3>How much will BobaBabies cost to mint?</h3>
-          <p>All BobaBabies will cost 2 SOL to mint.</p>
+          <p>All BobaBabies will cost 0.9 SOL to mint.</p>
+          <h3>How does the buyback and burn work?</h3>
+          <p>
+            100% of all proceeds from secondaries (such as on Solanart or
+            Digital Eyes) will go towards buying bobababies at floor price and
+            sending them to a burn address. Don't worry, these BobaBabes are
+            safe and living happy lives in another universe, but they will never
+            be able to come back to Solana.
+          </p>
           <h3>How many BobaBabies can I mint?</h3>
           <p>You can mint up to 20 BobaBabies per transaction.</p>
           <h3>Are any BobaBabies reserved for partnerships? </h3>
@@ -570,13 +578,13 @@ export const Home = () => {
             <li>Common</li>
             <li>Rare</li>
             <li>Ultra Rare</li>
-            <li>Secret Rare</li>
+            {/* <li>Secret Rare</li> */}
           </ul>
           <p>
-            Secret Rare traits are rare traits that will be revealed 24 hours
-            after minting goes live. The drop rates are transparent and can be
-            inspected using the Build & Explore tool, or by viewing the source
-            code on GitHub.
+            {/* Secret Rare traits are rare traits that will be revealed 24 hours
+            after minting goes live.  */}
+            The drop rates are transparent and can be inspected using the Build
+            & Explore tool, or by viewing the source code on GitHub.
           </p>
           <h3>How many traits will there be?</h3>
           <p>
@@ -727,6 +735,7 @@ export const Home = () => {
                 Drink: "Gradient Blue-Pink",
                 Boba: "Shaken Boba",
                 Background: "Plain Green",
+                Overlay: "None",
               }}
               noWatermark={true}
               unZoomable={true}
@@ -751,6 +760,7 @@ export const Home = () => {
                 Drink: "Solid Periwinkle",
                 Boba: "Hearts and Stars",
                 Background: "Plain Pink",
+                Overlay: "None",
               }}
               noWatermark={true}
               unZoomable={true}
@@ -775,6 +785,7 @@ export const Home = () => {
                 Drink: "Solid Pink",
                 Boba: "Three Rows Boba",
                 Background: "Plain Yellow",
+                Overlay: "None",
               }}
               noWatermark={true}
               unZoomable={true}

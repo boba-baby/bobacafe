@@ -24,6 +24,7 @@ import {
   AllEyesTraits,
   AllGlassesTraits,
   AllLidTraits,
+  AllOverlayTraits,
   AllStickerTraits,
   AllStrawTraits,
   AllTraits,
@@ -44,6 +45,10 @@ import {
 const babyArtDefinition: BabyArtDefinition = {
   Background: {
     traitType: "Background",
+    traits: [],
+  },
+  Overlay: {
+    traitType: "Overlay",
     traits: [],
   },
   Cup: {
@@ -422,6 +427,7 @@ function sortTrait(traitType: TraitType) {
 }
 
 sortTrait("Background");
+sortTrait("Overlay");
 sortTrait("Cup");
 sortTrait("Drink");
 sortTrait("Blush");
@@ -458,6 +464,7 @@ function generateTsUnions() {
   file += `
 export const AllTraits: Record<TraitType, Set<string>> = {
   Background: BackgroundTraits,
+  Overlay: OverlayTraits,
   Cup: CupTraits,
   Drink: DrinkTraits,
   Blush: BlushTraits,
@@ -491,6 +498,10 @@ function setRarity(
   throw new Error(
     `Couldnt find ${traitType}: "${traitName}" - "${subTraitName}"`
   );
+}
+
+function setOverlayRarity(rarity: number, traitName: AllOverlayTraits) {
+  setRarity("Overlay", rarity, traitName);
 }
 
 function setBackgroundRarity(rarity: number, traitName: AllBackgroundTraits) {
@@ -569,29 +580,36 @@ setBackgroundRarity(1, "Plain Purple");
 setBackgroundRarity(1, "Plain Yellow");
 setBackgroundRarity(0.2, "Purple Pink Bokeh");
 
-setCupRarity(0.003, "Invisible");
-setCupRarity(0.003, "Opaque White");
+setOverlayRarity(1, "Autumn Leaves");
+setOverlayRarity(1, "Clouds");
+setOverlayRarity(1, "Green Leaves");
+setOverlayRarity(30, "None");
+setOverlayRarity(1, "Pink Cherry Blossom Petals");
+setOverlayRarity(1, "Stars");
+setOverlayRarity(0.4, "Stars and Moon");
+setOverlayRarity(1, "White Cherry Blossom Petals");
+
 setCupRarity(1, "White");
 
-setDrinkRarity(0.5, "Gradient Blue-Pink");
-setDrinkRarity(1, "Solid Aqua");
+setDrinkRarity(0.2, "Gradient Blue-Pink");
+setDrinkRarity(0.5, "Solid Aqua");
 setDrinkRarity(1, "Solid Beige Cream");
 setDrinkRarity(1, "Solid Blue");
 setDrinkRarity(1, "Solid Blue Green");
-setDrinkRarity(1, "Solid Gray Blue");
-setDrinkRarity(1, "Solid Gray Green");
+setDrinkRarity(0.5, "Solid Gray Blue");
+setDrinkRarity(0.5, "Solid Gray Green");
 setDrinkRarity(1, "Solid Green");
 setDrinkRarity(1, "Solid Green Blue");
 setDrinkRarity(1, "Solid Lavender");
 setDrinkRarity(1, "Solid Medium Green");
 setDrinkRarity(1, "Solid Medium Purple");
 setDrinkRarity(1, "Solid Orange");
-setDrinkRarity(1, "Solid Periwinkle");
-setDrinkRarity(1, "Solid Pink");
+setDrinkRarity(0.5, "Solid Periwinkle");
+setDrinkRarity(0.5, "Solid Pink");
 setDrinkRarity(1, "Solid Purple");
 setDrinkRarity(1, "Solid Red");
-setDrinkRarity(1, "Solid Wine");
-setDrinkRarity(1, "Solid Yellow Green");
+setDrinkRarity(0.5, "Solid Wine");
+setDrinkRarity(0.5, "Solid Yellow Green");
 
 setBlushRarity(0.5, "Blue Spiral");
 setBlushRarity(0.1, "Blue Star");
@@ -642,11 +660,13 @@ setLidRarity(0.1, "Alien-Gold");
 setLidRarity(0.1, "Alien-Gray");
 setLidRarity(0.1, "Alien-Green");
 setLidRarity(1, "Alpaca-Beige");
-setLidRarity(1, "Alpaca-Pink");
+setLidRarity(0.5, "Alpaca-Pink");
 setLidRarity(1, "Bear-Brown");
 setLidRarity(1, "Bear-Polar");
 setLidRarity(1, "Bear-Purple");
 setLidRarity(1, "Bear-Yellow");
+setLidRarity(0.1, "Boba-Black");
+setLidRarity(0.1, "Boba-White");
 setLidRarity(0.3, "Bread Roll-Plain");
 setLidRarity(0.3, "Bread Roll-Taro");
 setLidRarity(1, "Bull-Gold Ring");
@@ -665,13 +685,13 @@ setLidRarity(0.3, "Cupcake-Pink");
 setLidRarity(0.3, "Cupcake-Pink Sprinkles");
 setLidRarity(0.3, "Cupcake-Purple Sprinkles");
 setLidRarity(0.3, "Cupcake-Rainbow");
+setLidRarity(0.1, "Dough-Blue");
 setLidRarity(0.1, "Dough-Pink");
-setLidRarity(0.1, "Dough-Secret");
 setLidRarity(0.1, "Dough-White");
 setLidRarity(0.1, "Dragon-Green");
 setLidRarity(0.1, "Dragon-Red");
-setLidRarity(1, "Ghost-Pink");
-setLidRarity(1, "Ghost-White");
+setLidRarity(0.1, "Ghost-Pink");
+setLidRarity(0.1, "Ghost-White");
 setLidRarity(1, "Gorilla-Blue Gray");
 setLidRarity(1, "Gorilla-Gray");
 setLidRarity(1, "Hamster-Brown");
@@ -694,11 +714,11 @@ setLidRarity(0.3, "Onigiri-Flavored");
 setLidRarity(1, "Otter-Ash Brown");
 setLidRarity(1, "Otter-Brown");
 setLidRarity(1, "Ox-Beige");
-setLidRarity(0.1, "Ox-Gold");
-setLidRarity(0.3, "Panda-Black and White");
-setLidRarity(0.3, "Panda-Blue");
-setLidRarity(1, "Panda-Pink");
-setLidRarity(1, "Panda-Purple");
+setLidRarity(0.3, "Ox-Gold");
+setLidRarity(1, "Panda-Black and White");
+setLidRarity(0.5, "Panda-Blue");
+setLidRarity(0.5, "Panda-Pink");
+setLidRarity(0.5, "Panda-Purple");
 setLidRarity(1, "Pig-Gray");
 setLidRarity(1, "Pig-Pink");
 setLidRarity(1, "Poodle-Brown");
@@ -709,24 +729,22 @@ setLidRarity(1, "Ram-Black");
 setLidRarity(1, "Ram-White");
 setLidRarity(1, "Red Panda-Light Orange");
 setLidRarity(1, "Red Panda-Red Orange");
+setLidRarity(0.1, "Rock-Blue");
 setLidRarity(0.1, "Rock-Pink");
-setLidRarity(0.1, "Rock-Secret.A");
-setLidRarity(0.1, "Rock-Secret.B");
+setLidRarity(0.1, "Rock-Purple");
 setLidRarity(1, "Rooster-Brown");
 setLidRarity(1, "Rooster-White");
-setLidRarity(0.1, "Secret.1-Secret.A");
-setLidRarity(0.1, "Secret.1-Secret.B");
-setLidRarity(0.8, "Sheep-Beige");
-setLidRarity(0.8, "Sheep-Black");
-setLidRarity(0.8, "Sheep-Blue");
-setLidRarity(0.8, "Sheep-Brown");
-setLidRarity(0.8, "Sheep-Green");
-setLidRarity(0.8, "Sheep-Orange");
-setLidRarity(0.8, "Sheep-Pink");
-setLidRarity(0.8, "Sheep-Purple");
-setLidRarity(0.8, "Sheep-Red");
-setLidRarity(0.8, "Sheep-White");
-setLidRarity(0.8, "Sheep-Yellow");
+setLidRarity(0.3, "Sheep-Beige");
+setLidRarity(0.1, "Sheep-Black");
+setLidRarity(0.3, "Sheep-Blue");
+setLidRarity(0.3, "Sheep-Brown");
+setLidRarity(0.3, "Sheep-Green");
+setLidRarity(0.3, "Sheep-Orange");
+setLidRarity(0.1, "Sheep-Pink");
+setLidRarity(0.3, "Sheep-Purple");
+setLidRarity(0.3, "Sheep-Red");
+setLidRarity(0.3, "Sheep-White");
+setLidRarity(0.3, "Sheep-Yellow");
 setLidRarity(1, "Shiba-Black");
 setLidRarity(1, "Shiba-Red");
 setLidRarity(1, "Snake-Green");
@@ -737,11 +755,11 @@ setLidRarity(1, "Striped Cat-Pink");
 setLidRarity(0.1, "Sun-Yellow");
 setLidRarity(0.1, "Sun-Yellow Orange");
 setLidRarity(0.3, "Teddy Bear-Avalanche");
-setLidRarity(1, "Teddy Bear-Black");
-setLidRarity(1, "Teddy Bear-Dark Brown");
+setLidRarity(0.5, "Teddy Bear-Black");
+setLidRarity(0.5, "Teddy Bear-Dark Brown");
 setLidRarity(0.3, "Teddy Bear-Ethereum");
-setLidRarity(1, "Teddy Bear-Golden Brown");
-setLidRarity(1, "Teddy Bear-Red Velvet");
+setLidRarity(0.5, "Teddy Bear-Golden Brown");
+setLidRarity(0.5, "Teddy Bear-Red Velvet");
 setLidRarity(1, "Tiger-Orange");
 setLidRarity(1, "Tiger-White");
 setLidRarity(0.1, "Unicorn-Secret.A");
@@ -750,9 +768,10 @@ setLidRarity(0.1, "Unicorn-White");
 setLidRarity(1, "Whale-Blue");
 setLidRarity(1, "Whale-White");
 
-setEyesRarity(0.2, "Closed U");
-setEyesRarity(0.2, "Closed V");
+setEyesRarity(0.5, "Closed U");
+setEyesRarity(0.5, "Closed V");
 setEyesRarity(0.1, "Dots");
+setEyesRarity(0, "Huge Alien");
 setEyesRarity(1, "Oval");
 setEyesRarity(1, "Oval Highlighted");
 setEyesRarity(1, "Oval Single Lash");
@@ -766,25 +785,33 @@ setEyesRarity(1, "Round Double Lash");
 setEyesRarity(1, "Round Highlighted");
 setEyesRarity(1, "Round Single Lash");
 setEyesRarity(1, "Round Top Lash");
-setEyesRarity(0.1, "Round Top Lash Wink");
-setEyesRarity(0.1, "Round Wink");
+setEyesRarity(0.5, "Round Top Lash Wink");
+setEyesRarity(0.5, "Round Wink");
 setEyesRarity(0.5, "Sparkly");
 setEyesRarity(0.5, "Sparkly Bottom Lash");
 setEyesRarity(0.5, "Sparkly Double Lash");
-setEyesRarity(0.1, "Sparkly Double Lash Wink");
+setEyesRarity(0.2, "Sparkly Double Lash Wink");
 setEyesRarity(0.5, "Sparkly Single Lash");
 setEyesRarity(0.5, "Sparkly Top Lash");
-setEyesRarity(0.1, "Sparkly Wink");
-setEyesRarity(1, "Spiral");
+setEyesRarity(0.5, "Sparkly Wink");
+setEyesRarity(0.2, "Spiral");
+setEyesRarity(0.2, "Star Eyes");
 
 setBobaRarity(0.2, "All Hearts");
+setBobaRarity(1, "Bears Boba");
+setBobaRarity(1, "Cats Boba");
+setBobaRarity(1, "Green Apple Boba");
 setBobaRarity(1, "Half Cup Round Boba");
 setBobaRarity(0.4, "Hearts and Stars");
 setBobaRarity(0.4, "Hearts and Stars Partial");
 setBobaRarity(0.4, "Hearts Partial");
 setBobaRarity(0.2, "None");
+setBobaRarity(1, "Pineapple Boba");
 setBobaRarity(0.1, "Shaken Boba");
+setBobaRarity(1, "Solana Boba");
+setBobaRarity(1, "Stars Boba");
 setBobaRarity(1, "Stars Partial");
+setBobaRarity(1, "Strawberry Boba");
 setBobaRarity(1, "Third Cup Round Black");
 setBobaRarity(1, "Three Rows Boba");
 
@@ -794,7 +821,7 @@ setGlassesRarity(1, "Gray Round Sunglasses");
 setGlassesRarity(0.5, "Green Flower Sunglasses");
 setGlassesRarity(1, "Green Round Sunglasses");
 setGlassesRarity(0.1, "Monocle");
-setGlassesRarity(20, "None");
+setGlassesRarity(25, "None");
 setGlassesRarity(0.5, "Orange Flower Sunglasses");
 setGlassesRarity(1, "Orange Round Sunglasses");
 setGlassesRarity(1, "Pink Heart Sunglasses");
@@ -815,6 +842,7 @@ setAccessoryRarity(0.2, "Crown Jewel");
 setAccessoryRarity(0.1, "Daisy");
 setAccessoryRarity(0.5, "Dango");
 setAccessoryRarity(1, "Double Bows");
+setAccessoryRarity(1, "Double Pink Cherry");
 setAccessoryRarity(0.1, "Double Red Cherry");
 setAccessoryRarity(0.1, "Enchanted Golden Apple");
 setAccessoryRarity(1, "Flower Stem");
@@ -822,7 +850,7 @@ setAccessoryRarity(0.2, "Golden Apple");
 setAccessoryRarity(1, "Green Apple");
 setAccessoryRarity(1, "Heart Antenna");
 setAccessoryRarity(1, "Leaf");
-setAccessoryRarity(30, "None");
+setAccessoryRarity(35, "None");
 setAccessoryRarity(1, "Pink Bow");
 setAccessoryRarity(1, "Pink Cherry");
 setAccessoryRarity(0.2, "Pink Cherry Double");
@@ -887,12 +915,15 @@ function calculateRarityNameAndPercent() {
     let thresholdUR = 0.26;
 
     if (traitType === "Lid") {
-      thresholdR = 0.9;
+      thresholdR = 0.79;
       thresholdUR = 0.11;
     } else if (traitType === "Accessory") {
       thresholdR = 1.2;
       thresholdUR = 0.25;
     } else if (traitType === "Background") {
+    } else if (traitType === "Overlay") {
+      thresholdR = 1.2;
+      thresholdUR = 0.5;
     } else if (traitType === "Blush") {
     } else if (traitType === "Boba") {
     } else if (traitType === "Cup") {
@@ -1023,6 +1054,7 @@ function printRaritySetter(traitType: TraitType) {
 }
 
 printRaritySetter("Background");
+printRaritySetter("Overlay");
 printRaritySetter("Cup");
 printRaritySetter("Drink");
 printRaritySetter("Blush");

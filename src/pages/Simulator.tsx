@@ -10,7 +10,6 @@ import { useElementSize } from "usehooks-ts";
 import { Tappable } from "./Tappable";
 import { ActualCanvas } from "./ActualCanvas";
 import { Rectifier } from "../Roooooller";
-import { babyArtDefinition } from "../babyArtDefinition";
 
 export type PickerLayout = "table" | "2x" | "3x" | "stacked";
 
@@ -51,12 +50,9 @@ export const Simulator = () => {
     let n = 0;
     if (updateStack.length) {
       const interval = setInterval(() => {
+        n++;
         if (updateStack.length) {
-          n++;
-          if (
-            updateStack.length &&
-            (n > 3 || updateStack.length === 1 || updateStack.length === 11)
-          ) {
+          if (n > 3 || updateStack.length === 11 || updateStack.length === 1) {
             setUpdateStack((oldUpdateStack) => {
               if (oldUpdateStack.length) {
                 const first = oldUpdateStack[0];
@@ -80,6 +76,7 @@ export const Simulator = () => {
 
               return oldUpdateStack.slice(1);
             });
+            n = 0;
           }
         }
       }, 11.11);
@@ -291,16 +288,16 @@ export const Simulator = () => {
                     traitValue: nextBabySpecs.Sticker,
                   },
                   {
-                    traitType: "Cup",
-                    traitValue: nextBabySpecs.Cup,
-                  },
-                  {
                     traitType: "Drink",
                     traitValue: nextBabySpecs.Drink,
                   },
                   {
                     traitType: "Boba",
                     traitValue: nextBabySpecs.Boba,
+                  },
+                  {
+                    traitType: "Overlay",
+                    traitValue: nextBabySpecs.Overlay,
                   },
                   {
                     traitType: "Background",
@@ -441,9 +438,9 @@ export const Simulator = () => {
             {createSimulatorPicker(pickerLayout, "Glasses", babySpecs.Glasses)}
             {createSimulatorPicker(pickerLayout, "Blush", babySpecs.Blush)}
             {createSimulatorPicker(pickerLayout, "Sticker", babySpecs.Sticker)}
-            {createSimulatorPicker(pickerLayout, "Cup", babySpecs.Cup)}
             {createSimulatorPicker(pickerLayout, "Drink", babySpecs.Drink)}
             {createSimulatorPicker(pickerLayout, "Boba", babySpecs.Boba)}
+            {createSimulatorPicker(pickerLayout, "Overlay", babySpecs.Overlay)}
             {createSimulatorPicker(
               pickerLayout,
               "Background",

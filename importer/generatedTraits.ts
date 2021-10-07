@@ -57,14 +57,31 @@ export const BackgroundTraits = new Set([
   "Purple Pink Bokeh",
 ]);
 
+export type AllOverlayTraits = 
+  | "Autumn Leaves"
+  | "Clouds"
+  | "Green Leaves"
+  | "None"
+  | "Pink Cherry Blossom Petals"
+  | "Stars"
+  | "Stars and Moon"
+  | "White Cherry Blossom Petals";
+
+export const OverlayTraits = new Set([
+  "Autumn Leaves",
+  "Clouds",
+  "Green Leaves",
+  "None",
+  "Pink Cherry Blossom Petals",
+  "Stars",
+  "Stars and Moon",
+  "White Cherry Blossom Petals",
+]);
+
 export type AllCupTraits = 
-  | "Invisible"
-  | "Opaque White"
   | "White";
 
 export const CupTraits = new Set([
-  "Invisible",
-  "Opaque White",
   "White",
 ]);
 
@@ -217,6 +234,8 @@ export type AllLidTraits =
   | "Bear-Polar"
   | "Bear-Purple"
   | "Bear-Yellow"
+  | "Boba-Black"
+  | "Boba-White"
   | "Bread Roll-Plain"
   | "Bread Roll-Taro"
   | "Bull-Gold Ring"
@@ -235,8 +254,8 @@ export type AllLidTraits =
   | "Cupcake-Pink Sprinkles"
   | "Cupcake-Purple Sprinkles"
   | "Cupcake-Rainbow"
+  | "Dough-Blue"
   | "Dough-Pink"
-  | "Dough-Secret"
   | "Dough-White"
   | "Dragon-Green"
   | "Dragon-Red"
@@ -279,13 +298,11 @@ export type AllLidTraits =
   | "Ram-White"
   | "Red Panda-Light Orange"
   | "Red Panda-Red Orange"
+  | "Rock-Blue"
   | "Rock-Pink"
-  | "Rock-Secret.A"
-  | "Rock-Secret.B"
+  | "Rock-Purple"
   | "Rooster-Brown"
   | "Rooster-White"
-  | "Secret.1-Secret.A"
-  | "Secret.1-Secret.B"
   | "Sheep-Beige"
   | "Sheep-Black"
   | "Sheep-Blue"
@@ -330,6 +347,8 @@ export const LidTraits = new Set([
   "Bear-Polar",
   "Bear-Purple",
   "Bear-Yellow",
+  "Boba-Black",
+  "Boba-White",
   "Bread Roll-Plain",
   "Bread Roll-Taro",
   "Bull-Gold Ring",
@@ -348,8 +367,8 @@ export const LidTraits = new Set([
   "Cupcake-Pink Sprinkles",
   "Cupcake-Purple Sprinkles",
   "Cupcake-Rainbow",
+  "Dough-Blue",
   "Dough-Pink",
-  "Dough-Secret",
   "Dough-White",
   "Dragon-Green",
   "Dragon-Red",
@@ -392,13 +411,11 @@ export const LidTraits = new Set([
   "Ram-White",
   "Red Panda-Light Orange",
   "Red Panda-Red Orange",
+  "Rock-Blue",
   "Rock-Pink",
-  "Rock-Secret.A",
-  "Rock-Secret.B",
+  "Rock-Purple",
   "Rooster-Brown",
   "Rooster-White",
-  "Secret.1-Secret.A",
-  "Secret.1-Secret.B",
   "Sheep-Beige",
   "Sheep-Black",
   "Sheep-Blue",
@@ -438,6 +455,7 @@ export type AllEyesTraits =
   | "Closed U"
   | "Closed V"
   | "Dots"
+  | "Huge Alien"
   | "Oval"
   | "Oval Highlighted"
   | "Oval Single Lash"
@@ -460,12 +478,14 @@ export type AllEyesTraits =
   | "Sparkly Single Lash"
   | "Sparkly Top Lash"
   | "Sparkly Wink"
-  | "Spiral";
+  | "Spiral"
+  | "Star Eyes";
 
 export const EyesTraits = new Set([
   "Closed U",
   "Closed V",
   "Dots",
+  "Huge Alien",
   "Oval",
   "Oval Highlighted",
   "Oval Single Lash",
@@ -489,29 +509,44 @@ export const EyesTraits = new Set([
   "Sparkly Top Lash",
   "Sparkly Wink",
   "Spiral",
+  "Star Eyes",
 ]);
 
 export type AllBobaTraits = 
   | "All Hearts"
+  | "Bears Boba"
+  | "Cats Boba"
+  | "Green Apple Boba"
   | "Half Cup Round Boba"
   | "Hearts and Stars"
   | "Hearts and Stars Partial"
   | "Hearts Partial"
   | "None"
+  | "Pineapple Boba"
   | "Shaken Boba"
+  | "Solana Boba"
+  | "Stars Boba"
   | "Stars Partial"
+  | "Strawberry Boba"
   | "Third Cup Round Black"
   | "Three Rows Boba";
 
 export const BobaTraits = new Set([
   "All Hearts",
+  "Bears Boba",
+  "Cats Boba",
+  "Green Apple Boba",
   "Half Cup Round Boba",
   "Hearts and Stars",
   "Hearts and Stars Partial",
   "Hearts Partial",
   "None",
+  "Pineapple Boba",
   "Shaken Boba",
+  "Solana Boba",
+  "Stars Boba",
   "Stars Partial",
+  "Strawberry Boba",
   "Third Cup Round Black",
   "Three Rows Boba",
 ]);
@@ -563,6 +598,7 @@ export type AllAccessoryTraits =
   | "Daisy"
   | "Dango"
   | "Double Bows"
+  | "Double Pink Cherry"
   | "Double Red Cherry"
   | "Enchanted Golden Apple"
   | "Flower Stem"
@@ -605,6 +641,7 @@ export const AccessoryTraits = new Set([
   "Daisy",
   "Dango",
   "Double Bows",
+  "Double Pink Cherry",
   "Double Red Cherry",
   "Enchanted Golden Apple",
   "Flower Stem",
@@ -709,6 +746,7 @@ export const StickerTraits = new Set([
 
 export const AllTraits: Record<TraitType, Set<string>> = {
   Background: BackgroundTraits,
+  Overlay: OverlayTraits,
   Cup: CupTraits,
   Drink: DrinkTraits,
   Blush: BlushTraits,

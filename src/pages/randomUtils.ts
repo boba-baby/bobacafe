@@ -170,7 +170,8 @@ export const generateLoadedRandom = (): FullBobaBaby => {
     Sticker: tryUntilNonSecret(() =>
       pullAtUniformWithMoreNoneChance("Sticker", 0.5)
     ),
-    Cup: tryUntilNonSecret(() => pullAtOdds("Cup")),
+    Cup: "White",
+    Overlay: tryUntilNonSecret(() => pullAtOdds("Overlay")),
     Drink: tryUntilNonSecret(() => pullAtUniform("Drink")),
     Boba: tryUntilNonSecret(() => pullAtUniform("Boba")),
     Background: tryUntilNonSecret(() => pullAtOdds("Background")), // show the simpler ones first, because some exotic ones really stand out

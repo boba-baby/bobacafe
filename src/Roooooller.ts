@@ -44,7 +44,7 @@ export const RooooolWithoutRectifier = (sha256hash: string): FullBobaBaby => {
   const glassesPoint = seedBytes.readUIntBE(12, 3) / 2 ** 24;
   const blushPoint = seedBytes.readUIntBE(15, 3) / 2 ** 24;
   const stickerPoint = seedBytes.readUIntBE(18, 3) / 2 ** 24;
-  const cupPoint = seedBytes.readUIntBE(21, 3) / 2 ** 24;
+  const overlayPoint = seedBytes.readUIntBE(21, 3) / 2 ** 24;
   const drinkPoint = seedBytes.readUIntBE(24, 3) / 2 ** 24;
   const bobaPoint = seedBytes.readUIntBE(27, 3) / 2 ** 24;
   const backgroundPoint = seedBytes.readUIntBE(30, 2) / 2 ** 16;
@@ -71,7 +71,6 @@ export const RooooolWithoutRectifier = (sha256hash: string): FullBobaBaby => {
     babyArtDefinition.Sticker.traits,
     stickerPoint
   );
-  const cupTrait = getTraitWithPoint(babyArtDefinition.Cup.traits, cupPoint);
   const drinkTrait = getTraitWithPoint(
     babyArtDefinition.Drink.traits,
     drinkPoint
@@ -80,6 +79,10 @@ export const RooooolWithoutRectifier = (sha256hash: string): FullBobaBaby => {
   const backgroundTrait = getTraitWithPoint(
     babyArtDefinition.Background.traits,
     backgroundPoint
+  );
+  const overlayTrait = getTraitWithPoint(
+    babyArtDefinition.Overlay.traits,
+    overlayPoint
   );
 
   return {
@@ -90,10 +93,11 @@ export const RooooolWithoutRectifier = (sha256hash: string): FullBobaBaby => {
     Glasses: glassesTrait.traitName,
     Blush: blushTrait.traitName,
     Sticker: stickerTrait.traitName,
-    Cup: cupTrait.traitName,
+    Cup: "White",
     Drink: drinkTrait.traitName,
     Boba: bobaTrait.traitName,
     Background: backgroundTrait.traitName,
+    Overlay: overlayTrait.traitName,
   };
 };
 
@@ -106,12 +110,21 @@ export const Rectifier = (baby: FullBobaBaby): FullBobaBaby => {
   const newBaby = Object.assign({}, baby);
   newBaby.Lid = [newBaby.Lid[0], newBaby.Lid[1]];
 
-  if (
-    newBaby.Lid[0] === "Dough" ||
-    newBaby.Lid[0] === "Secret.1" ||
-    newBaby.Lid[0] === "Alien"
-  ) {
+  if (newBaby.Lid[0] === "Dough" || newBaby.Lid[0] === "Secret.1") {
     newBaby.Eyes = "Dots";
+  }
+
+  if (newBaby.Eyes === "Huge Alien" && newBaby.Lid[0] !== "Alien") {
+    newBaby.Eyes = "Dots";
+  }
+
+  // dough can morph into alien
+  if (newBaby.Lid[0] === "Alien" && newBaby.Eyes !== "Dots") {
+    newBaby.Eyes = "Huge Alien";
+  }
+
+  if (newBaby.Lid[0] === "Rooster") {
+    newBaby.Accessory = "None";
   }
 
   if (

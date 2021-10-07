@@ -3,6 +3,7 @@ import { allTraitTypes, Rarity, Trait, TraitType } from "../IArtDef";
 
 const typeToTrait: Record<TraitType, Record<string, Trait>> = {
   Background: {},
+  Overlay: {},
   Cup: {},
   Drink: {},
   Blush: {},
