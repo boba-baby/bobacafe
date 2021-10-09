@@ -587,6 +587,7 @@ export const GlassesTraits = new Set([
 ]);
 
 export type AllAccessoryTraits = 
+  | "Angel Wings"
   | "Bee"
   | "Blue Bow"
   | "Butterfly"
@@ -630,6 +631,7 @@ export type AllAccessoryTraits =
   | "Yellow Rose Head";
 
 export const AccessoryTraits = new Set([
+  "Angel Wings",
   "Bee",
   "Blue Bow",
   "Butterfly",
@@ -681,17 +683,22 @@ export type AllStickerTraits =
   | "Cake"
   | "Coffee"
   | "Diamond"
+  | "Dinosaur"
   | "Doge"
   | "Flower"
   | "Frog"
   | "gm"
   | "gn"
+  | "GPU"
   | "Hamburger"
   | "Heart Forehead Sticker"
   | "Ice Cream Cone"
   | "ily"
+  | "Moon"
   | "Mushroom"
   | "Music Note"
+  | "ngmi"
+  | "ngu"
   | "None"
   | "Pink Heart"
   | "Pizza"
@@ -705,6 +712,7 @@ export type AllStickerTraits =
   | "Star Forehead Sticker"
   | "Tea"
   | "Unicorn"
+  | "wagmi"
   | "Waves"
   | "Whale";
 
@@ -716,17 +724,22 @@ export const StickerTraits = new Set([
   "Cake",
   "Coffee",
   "Diamond",
+  "Dinosaur",
   "Doge",
   "Flower",
   "Frog",
   "gm",
   "gn",
+  "GPU",
   "Hamburger",
   "Heart Forehead Sticker",
   "Ice Cream Cone",
   "ily",
+  "Moon",
   "Mushroom",
   "Music Note",
+  "ngmi",
+  "ngu",
   "None",
   "Pink Heart",
   "Pizza",
@@ -740,6 +753,7 @@ export const StickerTraits = new Set([
   "Star Forehead Sticker",
   "Tea",
   "Unicorn",
+  "wagmi",
   "Waves",
   "Whale",
 ]);

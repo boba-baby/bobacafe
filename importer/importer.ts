@@ -831,6 +831,7 @@ setGlassesRarity(1, "Silver Round Eyeglasses");
 setGlassesRarity(0.1, "Solana Heart Sunglasses");
 setGlassesRarity(1, "Yellow Round Sunglasses");
 
+setAccessoryRarity(0.1, "Angel Wings");
 setAccessoryRarity(0.1, "Bee");
 setAccessoryRarity(1, "Blue Bow");
 setAccessoryRarity(0.2, "Butterfly");
@@ -880,17 +881,22 @@ setStickerRarity(1, "Cactus");
 setStickerRarity(1, "Cake");
 setStickerRarity(1, "Coffee");
 setStickerRarity(0.1, "Diamond");
+setStickerRarity(0.1, "Dinosaur");
 setStickerRarity(0.1, "Doge");
 setStickerRarity(1, "Flower");
 setStickerRarity(0.5, "Frog");
 setStickerRarity(0.2, "gm");
 setStickerRarity(0.2, "gn");
+setStickerRarity(0.1, "GPU");
 setStickerRarity(0.5, "Hamburger");
 setStickerRarity(1, "Heart Forehead Sticker");
 setStickerRarity(0.5, "Ice Cream Cone");
 setStickerRarity(0.2, "ily");
+setStickerRarity(0.2, "Moon");
 setStickerRarity(0.5, "Mushroom");
 setStickerRarity(1, "Music Note");
+setStickerRarity(0.2, "ngmi");
+setStickerRarity(0.5, "ngu");
 setStickerRarity(50, "None");
 setStickerRarity(1, "Pink Heart");
 setStickerRarity(0.5, "Pizza");
@@ -904,9 +910,9 @@ setStickerRarity(1, "Star");
 setStickerRarity(1, "Star Forehead Sticker");
 setStickerRarity(1, "Tea");
 setStickerRarity(0.1, "Unicorn");
+setStickerRarity(0.5, "wagmi");
 setStickerRarity(1, "Waves");
 setStickerRarity(0.2, "Whale");
-
 function calculateRarityNameAndPercent() {
   for (const traitType of allTraitTypes) {
     let totalWeight = 0;

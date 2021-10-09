@@ -3452,10 +3452,22 @@
     "traitType": "Accessory",
     "traits": [
       {
+        "traitName": "Angel Wings",
+        "rarity": 0.1,
+        "rarityName": "Ultra Rare",
+        "rarityFrequency": 0.001652892561983471,
+        "layers": [
+          {
+            "zIndex": 12,
+            "fileName": "12-Accessory/Angel Wings.png"
+          }
+        ]
+      },
+      {
         "traitName": "Bee",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0016556291390728477,
+        "rarityFrequency": 0.001652892561983471,
         "layers": [
           {
             "zIndex": 12,
@@ -3467,7 +3479,7 @@
         "traitName": "Blue Bow",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3479,7 +3491,7 @@
         "traitName": "Butterfly",
         "rarity": 0.2,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0033112582781456954,
+        "rarityFrequency": 0.003305785123966942,
         "layers": [
           {
             "zIndex": 12,
@@ -3491,7 +3503,7 @@
         "traitName": "Candy",
         "rarity": 0.2,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0033112582781456954,
+        "rarityFrequency": 0.003305785123966942,
         "layers": [
           {
             "zIndex": 12,
@@ -3503,7 +3515,7 @@
         "traitName": "Cherry Blossom",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3515,7 +3527,7 @@
         "traitName": "Clover",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0016556291390728477,
+        "rarityFrequency": 0.001652892561983471,
         "layers": [
           {
             "zIndex": 12,
@@ -3527,7 +3539,7 @@
         "traitName": "Crown",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0016556291390728477,
+        "rarityFrequency": 0.001652892561983471,
         "layers": [
           {
             "zIndex": 12,
@@ -3539,7 +3551,7 @@
         "traitName": "Crown Jewel",
         "rarity": 0.2,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0033112582781456954,
+        "rarityFrequency": 0.003305785123966942,
         "layers": [
           {
             "zIndex": 12,
@@ -3551,7 +3563,7 @@
         "traitName": "Daisy",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0016556291390728477,
+        "rarityFrequency": 0.001652892561983471,
         "layers": [
           {
             "zIndex": 12,
@@ -3563,7 +3575,7 @@
         "traitName": "Dango",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.008278145695364237,
+        "rarityFrequency": 0.008264462809917354,
         "layers": [
           {
             "zIndex": 12,
@@ -3575,7 +3587,7 @@
         "traitName": "Double Bows",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3587,7 +3599,7 @@
         "traitName": "Double Pink Cherry",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3599,7 +3611,7 @@
         "traitName": "Double Red Cherry",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0016556291390728477,
+        "rarityFrequency": 0.001652892561983471,
         "layers": [
           {
             "zIndex": 12,
@@ -3611,7 +3623,7 @@
         "traitName": "Enchanted Golden Apple",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0016556291390728477,
+        "rarityFrequency": 0.001652892561983471,
         "layers": [
           {
             "zIndex": 12,
@@ -3623,7 +3635,7 @@
         "traitName": "Flower Stem",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3635,7 +3647,7 @@
         "traitName": "Golden Apple",
         "rarity": 0.2,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0033112582781456954,
+        "rarityFrequency": 0.003305785123966942,
         "layers": [
           {
             "zIndex": 12,
@@ -3647,7 +3659,7 @@
         "traitName": "Green Apple",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3659,7 +3671,7 @@
         "traitName": "Heart Antenna",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3671,7 +3683,7 @@
         "traitName": "Leaf",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3683,7 +3695,7 @@
         "traitName": "None",
         "rarity": 35,
         "rarityName": "Common",
-        "rarityFrequency": 0.5794701986754967,
+        "rarityFrequency": 0.5785123966942148,
         "layers": [
           {
             "zIndex": 12,
@@ -3695,7 +3707,7 @@
         "traitName": "Pink Bow",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3707,7 +3719,7 @@
         "traitName": "Pink Cherry",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3719,7 +3731,7 @@
         "traitName": "Pink Cherry Double",
         "rarity": 0.2,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0033112582781456954,
+        "rarityFrequency": 0.003305785123966942,
         "layers": [
           {
             "zIndex": 12,
@@ -3731,7 +3743,7 @@
         "traitName": "Pink Rose Head",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.008278145695364237,
+        "rarityFrequency": 0.008264462809917354,
         "layers": [
           {
             "zIndex": 12,
@@ -3743,7 +3755,7 @@
         "traitName": "Pink Strawberry",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.008278145695364237,
+        "rarityFrequency": 0.008264462809917354,
         "layers": [
           {
             "zIndex": 12,
@@ -3755,7 +3767,7 @@
         "traitName": "Plain Antenna",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3767,7 +3779,7 @@
         "traitName": "Plant Stem",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3779,7 +3791,7 @@
         "traitName": "Pom Poms",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.008278145695364237,
+        "rarityFrequency": 0.008264462809917354,
         "layers": [
           {
             "zIndex": 12,
@@ -3791,7 +3803,7 @@
         "traitName": "Purple Bow",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3803,7 +3815,7 @@
         "traitName": "Red Apple",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3815,7 +3827,7 @@
         "traitName": "Red Bow",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3827,7 +3839,7 @@
         "traitName": "Red Cherry",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3839,7 +3851,7 @@
         "traitName": "Red Rose",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3851,7 +3863,7 @@
         "traitName": "Red Rose Head",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3863,7 +3875,7 @@
         "traitName": "Red Strawberry",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3875,7 +3887,7 @@
         "traitName": "Secret.01",
         "rarity": 0.1,
         "rarityName": "Secret Rare",
-        "rarityFrequency": 0.0016556291390728477,
+        "rarityFrequency": 0.001652892561983471,
         "layers": [
           {
             "zIndex": 12,
@@ -3887,7 +3899,7 @@
         "traitName": "Snail",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0016556291390728477,
+        "rarityFrequency": 0.001652892561983471,
         "layers": [
           {
             "zIndex": 12,
@@ -3899,7 +3911,7 @@
         "traitName": "Sparkles",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0016556291390728477,
+        "rarityFrequency": 0.001652892561983471,
         "layers": [
           {
             "zIndex": 12,
@@ -3911,7 +3923,7 @@
         "traitName": "Star Antenna",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3923,7 +3935,7 @@
         "traitName": "White Bow",
         "rarity": 1,
         "rarityName": "Rare",
-        "rarityFrequency": 0.016556291390728475,
+        "rarityFrequency": 0.016528925619834708,
         "layers": [
           {
             "zIndex": 12,
@@ -3935,7 +3947,7 @@
         "traitName": "Yellow Rose Head",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.008278145695364237,
+        "rarityFrequency": 0.008264462809917354,
         "layers": [
           {
             "zIndex": 12,
@@ -3952,7 +3964,7 @@
         "traitName": "Bandaid",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014204545454545456,
+        "rarityFrequency": 0.013888888888888888,
         "layers": [
           {
             "zIndex": 11,
@@ -3964,7 +3976,7 @@
         "traitName": "Boba Cup",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014204545454545456,
+        "rarityFrequency": 0.013888888888888888,
         "layers": [
           {
             "zIndex": 11,
@@ -3976,7 +3988,7 @@
         "traitName": "BTC",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.007102272727272728,
+        "rarityFrequency": 0.006944444444444444,
         "layers": [
           {
             "zIndex": 11,
@@ -3988,7 +4000,7 @@
         "traitName": "Cactus",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014204545454545456,
+        "rarityFrequency": 0.013888888888888888,
         "layers": [
           {
             "zIndex": 11,
@@ -4000,7 +4012,7 @@
         "traitName": "Cake",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014204545454545456,
+        "rarityFrequency": 0.013888888888888888,
         "layers": [
           {
             "zIndex": 11,
@@ -4012,7 +4024,7 @@
         "traitName": "Coffee",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014204545454545456,
+        "rarityFrequency": 0.013888888888888888,
         "layers": [
           {
             "zIndex": 11,
@@ -4024,7 +4036,7 @@
         "traitName": "Diamond",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014204545454545457,
+        "rarityFrequency": 0.001388888888888889,
         "layers": [
           {
             "zIndex": 11,
@@ -4033,10 +4045,22 @@
         ]
       },
       {
+        "traitName": "Dinosaur",
+        "rarity": 0.1,
+        "rarityName": "Ultra Rare",
+        "rarityFrequency": 0.001388888888888889,
+        "layers": [
+          {
+            "zIndex": 11,
+            "fileName": "11-Sticker/Dinosaur.png"
+          }
+        ]
+      },
+      {
         "traitName": "Doge",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014204545454545457,
+        "rarityFrequency": 0.001388888888888889,
         "layers": [
           {
             "zIndex": 11,
@@ -4048,7 +4072,7 @@
         "traitName": "Flower",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014204545454545456,
+        "rarityFrequency": 0.013888888888888888,
         "layers": [
           {
             "zIndex": 11,
@@ -4060,7 +4084,7 @@
         "traitName": "Frog",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.007102272727272728,
+        "rarityFrequency": 0.006944444444444444,
         "layers": [
           {
             "zIndex": 11,
@@ -4072,7 +4096,7 @@
         "traitName": "gm",
         "rarity": 0.2,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0028409090909090914,
+        "rarityFrequency": 0.002777777777777778,
         "layers": [
           {
             "zIndex": 11,
@@ -4084,7 +4108,7 @@
         "traitName": "gn",
         "rarity": 0.2,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0028409090909090914,
+        "rarityFrequency": 0.002777777777777778,
         "layers": [
           {
             "zIndex": 11,
@@ -4093,10 +4117,22 @@
         ]
       },
       {
+        "traitName": "GPU",
+        "rarity": 0.1,
+        "rarityName": "Ultra Rare",
+        "rarityFrequency": 0.001388888888888889,
+        "layers": [
+          {
+            "zIndex": 11,
+            "fileName": "11-Sticker/GPU.png"
+          }
+        ]
+      },
+      {
         "traitName": "Hamburger",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.007102272727272728,
+        "rarityFrequency": 0.006944444444444444,
         "layers": [
           {
             "zIndex": 11,
@@ -4108,7 +4144,7 @@
         "traitName": "Heart Forehead Sticker",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014204545454545456,
+        "rarityFrequency": 0.013888888888888888,
         "layers": [
           {
             "zIndex": 11,
@@ -4120,7 +4156,7 @@
         "traitName": "Ice Cream Cone",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.007102272727272728,
+        "rarityFrequency": 0.006944444444444444,
         "layers": [
           {
             "zIndex": 11,
@@ -4132,7 +4168,7 @@
         "traitName": "ily",
         "rarity": 0.2,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0028409090909090914,
+        "rarityFrequency": 0.002777777777777778,
         "layers": [
           {
             "zIndex": 11,
@@ -4141,10 +4177,22 @@
         ]
       },
       {
+        "traitName": "Moon",
+        "rarity": 0.2,
+        "rarityName": "Ultra Rare",
+        "rarityFrequency": 0.002777777777777778,
+        "layers": [
+          {
+            "zIndex": 11,
+            "fileName": "11-Sticker/Moon.png"
+          }
+        ]
+      },
+      {
         "traitName": "Mushroom",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.007102272727272728,
+        "rarityFrequency": 0.006944444444444444,
         "layers": [
           {
             "zIndex": 11,
@@ -4156,7 +4204,7 @@
         "traitName": "Music Note",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014204545454545456,
+        "rarityFrequency": 0.013888888888888888,
         "layers": [
           {
             "zIndex": 11,
@@ -4165,10 +4213,34 @@
         ]
       },
       {
+        "traitName": "ngmi",
+        "rarity": 0.2,
+        "rarityName": "Ultra Rare",
+        "rarityFrequency": 0.002777777777777778,
+        "layers": [
+          {
+            "zIndex": 11,
+            "fileName": "11-Sticker/ngmi.png"
+          }
+        ]
+      },
+      {
+        "traitName": "ngu",
+        "rarity": 0.5,
+        "rarityName": "Rare",
+        "rarityFrequency": 0.006944444444444444,
+        "layers": [
+          {
+            "zIndex": 11,
+            "fileName": "11-Sticker/ngu.png"
+          }
+        ]
+      },
+      {
         "traitName": "None",
         "rarity": 50,
         "rarityName": "Common",
-        "rarityFrequency": 0.7102272727272728,
+        "rarityFrequency": 0.6944444444444444,
         "layers": [
           {
             "zIndex": 11,
@@ -4180,7 +4252,7 @@
         "traitName": "Pink Heart",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014204545454545456,
+        "rarityFrequency": 0.013888888888888888,
         "layers": [
           {
             "zIndex": 11,
@@ -4192,7 +4264,7 @@
         "traitName": "Pizza",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.007102272727272728,
+        "rarityFrequency": 0.006944444444444444,
         "layers": [
           {
             "zIndex": 11,
@@ -4204,7 +4276,7 @@
         "traitName": "Pumpkin",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.007102272727272728,
+        "rarityFrequency": 0.006944444444444444,
         "layers": [
           {
             "zIndex": 11,
@@ -4216,7 +4288,7 @@
         "traitName": "Rainbow",
         "rarity": 0.2,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0028409090909090914,
+        "rarityFrequency": 0.002777777777777778,
         "layers": [
           {
             "zIndex": 11,
@@ -4228,7 +4300,7 @@
         "traitName": "Red Heart",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014204545454545456,
+        "rarityFrequency": 0.013888888888888888,
         "layers": [
           {
             "zIndex": 11,
@@ -4240,7 +4312,7 @@
         "traitName": "Rocket",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.007102272727272728,
+        "rarityFrequency": 0.006944444444444444,
         "layers": [
           {
             "zIndex": 11,
@@ -4252,7 +4324,7 @@
         "traitName": "Shaka",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014204545454545456,
+        "rarityFrequency": 0.013888888888888888,
         "layers": [
           {
             "zIndex": 11,
@@ -4264,7 +4336,7 @@
         "traitName": "Solana",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014204545454545457,
+        "rarityFrequency": 0.001388888888888889,
         "layers": [
           {
             "zIndex": 11,
@@ -4276,7 +4348,7 @@
         "traitName": "Star",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014204545454545456,
+        "rarityFrequency": 0.013888888888888888,
         "layers": [
           {
             "zIndex": 11,
@@ -4288,7 +4360,7 @@
         "traitName": "Star Forehead Sticker",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014204545454545456,
+        "rarityFrequency": 0.013888888888888888,
         "layers": [
           {
             "zIndex": 11,
@@ -4300,7 +4372,7 @@
         "traitName": "Tea",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014204545454545456,
+        "rarityFrequency": 0.013888888888888888,
         "layers": [
           {
             "zIndex": 11,
@@ -4312,7 +4384,7 @@
         "traitName": "Unicorn",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014204545454545457,
+        "rarityFrequency": 0.001388888888888889,
         "layers": [
           {
             "zIndex": 11,
@@ -4321,10 +4393,22 @@
         ]
       },
       {
+        "traitName": "wagmi",
+        "rarity": 0.5,
+        "rarityName": "Rare",
+        "rarityFrequency": 0.006944444444444444,
+        "layers": [
+          {
+            "zIndex": 11,
+            "fileName": "11-Sticker/wagmi.png"
+          }
+        ]
+      },
+      {
         "traitName": "Waves",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014204545454545456,
+        "rarityFrequency": 0.013888888888888888,
         "layers": [
           {
             "zIndex": 11,
@@ -4336,7 +4420,7 @@
         "traitName": "Whale",
         "rarity": 0.2,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0028409090909090914,
+        "rarityFrequency": 0.002777777777777778,
         "layers": [
           {
             "zIndex": 11,
