@@ -86,7 +86,22 @@ export const CupTraits = new Set([
 ]);
 
 export type AllDrinkTraits = 
+  | "Gradient Blue"
+  | "Gradient Blue Gray-Pink"
   | "Gradient Blue-Pink"
+  | "Gradient Coral-Green"
+  | "Gradient Green"
+  | "Gradient Green-Pink"
+  | "Gradient Green-Purple"
+  | "Gradient Orange"
+  | "Gradient Orange-Green"
+  | "Gradient Pink"
+  | "Gradient Pink-Orange"
+  | "Gradient Pink-Yellow Green"
+  | "Gradient Purple"
+  | "Gradient Purple-Orange"
+  | "Gradient Yellow Green-Blue"
+  | "Solana"
   | "Solid Aqua"
   | "Solid Beige Cream"
   | "Solid Blue"
@@ -107,7 +122,22 @@ export type AllDrinkTraits =
   | "Solid Yellow Green";
 
 export const DrinkTraits = new Set([
+  "Gradient Blue",
+  "Gradient Blue Gray-Pink",
   "Gradient Blue-Pink",
+  "Gradient Coral-Green",
+  "Gradient Green",
+  "Gradient Green-Pink",
+  "Gradient Green-Purple",
+  "Gradient Orange",
+  "Gradient Orange-Green",
+  "Gradient Pink",
+  "Gradient Pink-Orange",
+  "Gradient Pink-Yellow Green",
+  "Gradient Purple",
+  "Gradient Purple-Orange",
+  "Gradient Yellow Green-Blue",
+  "Solana",
   "Solid Aqua",
   "Solid Beige Cream",
   "Solid Blue",
@@ -198,6 +228,7 @@ export const BlushTraits = new Set([
 ]);
 
 export type AllStrawTraits = 
+  | "Black"
   | "Blue"
   | "Fuchsia"
   | "Green"
@@ -211,6 +242,7 @@ export type AllStrawTraits =
   | "Yellow";
 
 export const StrawTraits = new Set([
+  "Black",
   "Blue",
   "Fuchsia",
   "Green",
@@ -244,6 +276,7 @@ export type AllLidTraits =
   | "Bunny-White"
   | "Cat-Black Spots"
   | "Cat-Brown"
+  | "Cat-Gray"
   | "Cat-Orange Spots"
   | "Cat-White"
   | "Cow-Black White"
@@ -331,7 +364,6 @@ export type AllLidTraits =
   | "Teddy Bear-Red Velvet"
   | "Tiger-Orange"
   | "Tiger-White"
-  | "Unicorn-Secret.A"
   | "Unicorn-Solana"
   | "Unicorn-White"
   | "Whale-Blue"
@@ -357,6 +389,7 @@ export const LidTraits = new Set([
   "Bunny-White",
   "Cat-Black Spots",
   "Cat-Brown",
+  "Cat-Gray",
   "Cat-Orange Spots",
   "Cat-White",
   "Cow-Black White",
@@ -444,7 +477,6 @@ export const LidTraits = new Set([
   "Teddy Bear-Red Velvet",
   "Tiger-Orange",
   "Tiger-White",
-  "Unicorn-Secret.A",
   "Unicorn-Solana",
   "Unicorn-White",
   "Whale-Blue",
@@ -521,6 +553,7 @@ export type AllBobaTraits =
   | "Hearts and Stars"
   | "Hearts and Stars Partial"
   | "Hearts Partial"
+  | "Lychee Boba"
   | "None"
   | "Pineapple Boba"
   | "Shaken Boba"
@@ -540,6 +573,7 @@ export const BobaTraits = new Set([
   "Hearts and Stars",
   "Hearts and Stars Partial",
   "Hearts Partial",
+  "Lychee Boba",
   "None",
   "Pineapple Boba",
   "Shaken Boba",
@@ -552,6 +586,7 @@ export const BobaTraits = new Set([
 ]);
 
 export type AllGlassesTraits = 
+  | "AR Glasses"
   | "Blue Clear"
   | "Gold Round Eyeglasses"
   | "Gray Round Sunglasses"
@@ -562,13 +597,17 @@ export type AllGlassesTraits =
   | "Orange Flower Sunglasses"
   | "Orange Round Sunglasses"
   | "Pink Heart Sunglasses"
+  | "Pit Vipers Solana"
   | "Purple Gradient Heart Sunglasses"
   | "Purple Round Sunglasses"
   | "Silver Round Eyeglasses"
   | "Solana Heart Sunglasses"
+  | "VR HL3"
+  | "VR Ultrawide"
   | "Yellow Round Sunglasses";
 
 export const GlassesTraits = new Set([
+  "AR Glasses",
   "Blue Clear",
   "Gold Round Eyeglasses",
   "Gray Round Sunglasses",
@@ -579,10 +618,13 @@ export const GlassesTraits = new Set([
   "Orange Flower Sunglasses",
   "Orange Round Sunglasses",
   "Pink Heart Sunglasses",
+  "Pit Vipers Solana",
   "Purple Gradient Heart Sunglasses",
   "Purple Round Sunglasses",
   "Silver Round Eyeglasses",
   "Solana Heart Sunglasses",
+  "VR HL3",
+  "VR Ultrawide",
   "Yellow Round Sunglasses",
 ]);
 
@@ -604,6 +646,7 @@ export type AllAccessoryTraits =
   | "Enchanted Golden Apple"
   | "Flower Stem"
   | "Golden Apple"
+  | "GPU Drink"
   | "Green Apple"
   | "Heart Antenna"
   | "Leaf"
@@ -623,10 +666,11 @@ export type AllAccessoryTraits =
   | "Red Rose"
   | "Red Rose Head"
   | "Red Strawberry"
-  | "Secret.01"
   | "Snail"
+  | "Solana Bow"
   | "Sparkles"
   | "Star Antenna"
+  | "Whale Drink"
   | "White Bow"
   | "Yellow Rose Head";
 
@@ -648,6 +692,7 @@ export const AccessoryTraits = new Set([
   "Enchanted Golden Apple",
   "Flower Stem",
   "Golden Apple",
+  "GPU Drink",
   "Green Apple",
   "Heart Antenna",
   "Leaf",
@@ -667,10 +712,11 @@ export const AccessoryTraits = new Set([
   "Red Rose",
   "Red Rose Head",
   "Red Strawberry",
-  "Secret.01",
   "Snail",
+  "Solana Bow",
   "Sparkles",
   "Star Antenna",
+  "Whale Drink",
   "White Bow",
   "Yellow Rose Head",
 ]);
