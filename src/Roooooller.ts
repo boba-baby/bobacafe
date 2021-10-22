@@ -123,6 +123,10 @@ export const Rectifier = (baby: FullBobaBaby): FullBobaBaby => {
     newBaby.Eyes = "Huge Alien";
   }
 
+  if (newBaby.Lid[0] === "Pumpkin" && newBaby.Lid[1] === "Jack O Lantern") {
+    newBaby.Eyes = "Jack O Lantern";
+  }
+
   if (newBaby.Lid[0] === "Alien") {
     newBaby.Glasses = "None";
   }

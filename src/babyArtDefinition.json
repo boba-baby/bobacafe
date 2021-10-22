@@ -441,7 +441,7 @@
         "traitName": "Gradient Blue",
         "rarity": 0.15,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.008875739644970414,
+        "rarityFrequency": 0.008720930232558141,
         "layers": [
           {
             "zIndex": 3,
@@ -453,7 +453,7 @@
         "traitName": "Gradient Blue Gray-Pink",
         "rarity": 0.15,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.008875739644970414,
+        "rarityFrequency": 0.008720930232558141,
         "layers": [
           {
             "zIndex": 3,
@@ -465,7 +465,7 @@
         "traitName": "Gradient Blue-Pink",
         "rarity": 0.15,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.008875739644970414,
+        "rarityFrequency": 0.008720930232558141,
         "layers": [
           {
             "zIndex": 3,
@@ -477,7 +477,7 @@
         "traitName": "Gradient Coral-Green",
         "rarity": 0.15,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.008875739644970414,
+        "rarityFrequency": 0.008720930232558141,
         "layers": [
           {
             "zIndex": 3,
@@ -489,7 +489,7 @@
         "traitName": "Gradient Green",
         "rarity": 0.15,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.008875739644970414,
+        "rarityFrequency": 0.008720930232558141,
         "layers": [
           {
             "zIndex": 3,
@@ -501,7 +501,7 @@
         "traitName": "Gradient Green-Pink",
         "rarity": 0.15,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.008875739644970414,
+        "rarityFrequency": 0.008720930232558141,
         "layers": [
           {
             "zIndex": 3,
@@ -513,7 +513,7 @@
         "traitName": "Gradient Green-Purple",
         "rarity": 0.15,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.008875739644970414,
+        "rarityFrequency": 0.008720930232558141,
         "layers": [
           {
             "zIndex": 3,
@@ -525,7 +525,7 @@
         "traitName": "Gradient Orange",
         "rarity": 0.15,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.008875739644970414,
+        "rarityFrequency": 0.008720930232558141,
         "layers": [
           {
             "zIndex": 3,
@@ -537,7 +537,7 @@
         "traitName": "Gradient Orange-Green",
         "rarity": 0.15,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.008875739644970414,
+        "rarityFrequency": 0.008720930232558141,
         "layers": [
           {
             "zIndex": 3,
@@ -549,7 +549,7 @@
         "traitName": "Gradient Pink",
         "rarity": 0.15,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.008875739644970414,
+        "rarityFrequency": 0.008720930232558141,
         "layers": [
           {
             "zIndex": 3,
@@ -561,7 +561,7 @@
         "traitName": "Gradient Pink-Orange",
         "rarity": 0.15,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.008875739644970414,
+        "rarityFrequency": 0.008720930232558141,
         "layers": [
           {
             "zIndex": 3,
@@ -573,7 +573,7 @@
         "traitName": "Gradient Pink-Yellow Green",
         "rarity": 0.15,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.008875739644970414,
+        "rarityFrequency": 0.008720930232558141,
         "layers": [
           {
             "zIndex": 3,
@@ -585,7 +585,7 @@
         "traitName": "Gradient Purple",
         "rarity": 0.15,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.008875739644970414,
+        "rarityFrequency": 0.008720930232558141,
         "layers": [
           {
             "zIndex": 3,
@@ -597,7 +597,7 @@
         "traitName": "Gradient Purple-Orange",
         "rarity": 0.15,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.008875739644970414,
+        "rarityFrequency": 0.008720930232558141,
         "layers": [
           {
             "zIndex": 3,
@@ -609,7 +609,7 @@
         "traitName": "Gradient Yellow Green-Blue",
         "rarity": 0.15,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.008875739644970414,
+        "rarityFrequency": 0.008720930232558141,
         "layers": [
           {
             "zIndex": 3,
@@ -618,10 +618,22 @@
         ]
       },
       {
+        "traitName": "Matcha Latte",
+        "rarity": 0.15,
+        "rarityName": "Ultra Rare",
+        "rarityFrequency": 0.008720930232558141,
+        "layers": [
+          {
+            "zIndex": 3,
+            "fileName": "3-Drink/Matcha Latte.png"
+          }
+        ]
+      },
+      {
         "traitName": "Solana",
         "rarity": 0.15,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.008875739644970414,
+        "rarityFrequency": 0.008720930232558141,
         "layers": [
           {
             "zIndex": 3,
@@ -633,7 +645,7 @@
         "traitName": "Solid Aqua",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.02958579881656805,
+        "rarityFrequency": 0.02906976744186047,
         "layers": [
           {
             "zIndex": 3,
@@ -645,7 +657,7 @@
         "traitName": "Solid Beige Cream",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.0591715976331361,
+        "rarityFrequency": 0.05813953488372094,
         "layers": [
           {
             "zIndex": 3,
@@ -657,7 +669,7 @@
         "traitName": "Solid Blue",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.0591715976331361,
+        "rarityFrequency": 0.05813953488372094,
         "layers": [
           {
             "zIndex": 3,
@@ -669,7 +681,7 @@
         "traitName": "Solid Blue Green",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.0591715976331361,
+        "rarityFrequency": 0.05813953488372094,
         "layers": [
           {
             "zIndex": 3,
@@ -681,7 +693,7 @@
         "traitName": "Solid Gray Blue",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.02958579881656805,
+        "rarityFrequency": 0.02906976744186047,
         "layers": [
           {
             "zIndex": 3,
@@ -693,7 +705,7 @@
         "traitName": "Solid Gray Green",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.02958579881656805,
+        "rarityFrequency": 0.02906976744186047,
         "layers": [
           {
             "zIndex": 3,
@@ -705,7 +717,7 @@
         "traitName": "Solid Green",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.0591715976331361,
+        "rarityFrequency": 0.05813953488372094,
         "layers": [
           {
             "zIndex": 3,
@@ -717,7 +729,7 @@
         "traitName": "Solid Green Blue",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.0591715976331361,
+        "rarityFrequency": 0.05813953488372094,
         "layers": [
           {
             "zIndex": 3,
@@ -729,7 +741,7 @@
         "traitName": "Solid Lavender",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.0591715976331361,
+        "rarityFrequency": 0.05813953488372094,
         "layers": [
           {
             "zIndex": 3,
@@ -741,7 +753,7 @@
         "traitName": "Solid Medium Green",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.0591715976331361,
+        "rarityFrequency": 0.05813953488372094,
         "layers": [
           {
             "zIndex": 3,
@@ -753,7 +765,7 @@
         "traitName": "Solid Medium Purple",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.0591715976331361,
+        "rarityFrequency": 0.05813953488372094,
         "layers": [
           {
             "zIndex": 3,
@@ -765,7 +777,7 @@
         "traitName": "Solid Orange",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.0591715976331361,
+        "rarityFrequency": 0.05813953488372094,
         "layers": [
           {
             "zIndex": 3,
@@ -777,7 +789,7 @@
         "traitName": "Solid Periwinkle",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.02958579881656805,
+        "rarityFrequency": 0.02906976744186047,
         "layers": [
           {
             "zIndex": 3,
@@ -789,7 +801,7 @@
         "traitName": "Solid Pink",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.02958579881656805,
+        "rarityFrequency": 0.02906976744186047,
         "layers": [
           {
             "zIndex": 3,
@@ -801,7 +813,7 @@
         "traitName": "Solid Purple",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.0591715976331361,
+        "rarityFrequency": 0.05813953488372094,
         "layers": [
           {
             "zIndex": 3,
@@ -813,7 +825,7 @@
         "traitName": "Solid Red",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.0591715976331361,
+        "rarityFrequency": 0.05813953488372094,
         "layers": [
           {
             "zIndex": 3,
@@ -825,7 +837,7 @@
         "traitName": "Solid Wine",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.02958579881656805,
+        "rarityFrequency": 0.02906976744186047,
         "layers": [
           {
             "zIndex": 3,
@@ -837,11 +849,23 @@
         "traitName": "Solid Yellow Green",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.02958579881656805,
+        "rarityFrequency": 0.02906976744186047,
         "layers": [
           {
             "zIndex": 3,
             "fileName": "3-Drink/Solid Yellow Green.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Strawberry Matcha",
+        "rarity": 0.15,
+        "rarityName": "Ultra Rare",
+        "rarityFrequency": 0.008720930232558141,
+        "layers": [
+          {
+            "zIndex": 3,
+            "fileName": "3-Drink/Strawberry Matcha.png"
           }
         ]
       }
@@ -1441,7 +1465,7 @@
         "subTraitName": "Gold",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1454,7 +1478,7 @@
         "subTraitName": "Gray",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1467,7 +1491,7 @@
         "subTraitName": "Green",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1480,7 +1504,7 @@
         "subTraitName": "Beige",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1490,10 +1514,23 @@
       },
       {
         "traitName": "Alpaca",
+        "subTraitName": "Brown",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Alpaca-Brown.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Alpaca",
         "subTraitName": "Pink",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.007496251874062973,
+        "rarityFrequency": 0.005787037037037043,
         "layers": [
           {
             "zIndex": 7,
@@ -1506,7 +1543,7 @@
         "subTraitName": "Brown",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1519,7 +1556,7 @@
         "subTraitName": "Polar",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1532,7 +1569,7 @@
         "subTraitName": "Purple",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1545,7 +1582,7 @@
         "subTraitName": "Yellow",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1558,7 +1595,7 @@
         "subTraitName": "Black",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1568,10 +1605,23 @@
       },
       {
         "traitName": "Boba",
+        "subTraitName": "Green",
+        "rarity": 0.1,
+        "rarityName": "Ultra Rare",
+        "rarityFrequency": 0.0011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Boba-Green.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Boba",
         "subTraitName": "White",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1581,10 +1631,23 @@
       },
       {
         "traitName": "Bread Roll",
+        "subTraitName": "Matcha",
+        "rarity": 0.3,
+        "rarityName": "Rare",
+        "rarityFrequency": 0.0034722222222222255,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Bread Roll-Matcha.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Bread Roll",
         "subTraitName": "Plain",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -1597,7 +1660,7 @@
         "subTraitName": "Taro",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -1610,7 +1673,7 @@
         "subTraitName": "Gold Ring",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1623,7 +1686,7 @@
         "subTraitName": "Solana",
         "rarity": 0.8,
         "rarityName": "Common",
-        "rarityFrequency": 0.011994002998500758,
+        "rarityFrequency": 0.00925925925925927,
         "layers": [
           {
             "zIndex": 7,
@@ -1632,11 +1695,24 @@
         ]
       },
       {
+        "traitName": "Bull",
+        "subTraitName": "White",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Bull-White.png"
+          }
+        ]
+      },
+      {
         "traitName": "Bunny",
         "subTraitName": "Brown",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1646,10 +1722,23 @@
       },
       {
         "traitName": "Bunny",
+        "subTraitName": "Pink",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Bunny-Pink.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Bunny",
         "subTraitName": "White",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1662,7 +1751,7 @@
         "subTraitName": "Black Spots",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1675,7 +1764,7 @@
         "subTraitName": "Brown",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1688,7 +1777,7 @@
         "subTraitName": "Gray",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1701,7 +1790,7 @@
         "subTraitName": "Orange Spots",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1714,7 +1803,7 @@
         "subTraitName": "White",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1727,7 +1816,7 @@
         "subTraitName": "Black White",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1740,7 +1829,7 @@
         "subTraitName": "Brown White",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1749,11 +1838,24 @@
         ]
       },
       {
+        "traitName": "Cow",
+        "subTraitName": "Pink White",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Cow-Pink White.png"
+          }
+        ]
+      },
+      {
         "traitName": "Cupcake",
         "subTraitName": "Blue Sprinkles",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -1766,7 +1868,7 @@
         "subTraitName": "Orange",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -1779,7 +1881,7 @@
         "subTraitName": "Pink",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -1792,7 +1894,7 @@
         "subTraitName": "Pink Sprinkles",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -1805,7 +1907,7 @@
         "subTraitName": "Purple Sprinkles",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -1818,7 +1920,7 @@
         "subTraitName": "Rainbow",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -1831,7 +1933,7 @@
         "subTraitName": "Blue",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1844,7 +1946,7 @@
         "subTraitName": "Pink",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1857,7 +1959,7 @@
         "subTraitName": "White",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1867,10 +1969,23 @@
       },
       {
         "traitName": "Dragon",
+        "subTraitName": "Gold",
+        "rarity": 0.1,
+        "rarityName": "Ultra Rare",
+        "rarityFrequency": 0.0011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Dragon-Gold.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Dragon",
         "subTraitName": "Green",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1883,7 +1998,7 @@
         "subTraitName": "Red",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1893,10 +2008,23 @@
       },
       {
         "traitName": "Ghost",
+        "subTraitName": "Blue",
+        "rarity": 0.1,
+        "rarityName": "Ultra Rare",
+        "rarityFrequency": 0.0011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Ghost-Blue.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Ghost",
         "subTraitName": "Pink",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1909,7 +2037,7 @@
         "subTraitName": "White",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1918,11 +2046,24 @@
         ]
       },
       {
+        "traitName": "Ghost",
+        "subTraitName": "Yellow",
+        "rarity": 0.1,
+        "rarityName": "Ultra Rare",
+        "rarityFrequency": 0.0011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Ghost-Yellow.png"
+          }
+        ]
+      },
+      {
         "traitName": "Gorilla",
         "subTraitName": "Blue Gray",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1935,7 +2076,7 @@
         "subTraitName": "Gray",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -1944,11 +2085,24 @@
         ]
       },
       {
+        "traitName": "Gorilla",
+        "subTraitName": "Purple",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Gorilla-Purple.png"
+          }
+        ]
+      },
+      {
         "traitName": "Hamster",
         "subTraitName": "Brown",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 14,
@@ -1965,7 +2119,7 @@
         "subTraitName": "Gray",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 14,
@@ -1982,7 +2136,7 @@
         "subTraitName": "Orange",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 14,
@@ -1999,7 +2153,7 @@
         "subTraitName": "Brown",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2009,10 +2163,23 @@
       },
       {
         "traitName": "Horse",
+        "subTraitName": "Pink",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Horse-Pink.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Horse",
         "subTraitName": "White",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2025,7 +2192,7 @@
         "subTraitName": "Chocolate",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2038,7 +2205,7 @@
         "subTraitName": "Strawberry",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2051,7 +2218,7 @@
         "subTraitName": "Vanilla",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2061,10 +2228,23 @@
       },
       {
         "traitName": "Monkey",
+        "subTraitName": "Black",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Monkey-Black.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Monkey",
         "subTraitName": "Brown",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2077,7 +2257,7 @@
         "subTraitName": "Brown and Pink",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2087,10 +2267,23 @@
       },
       {
         "traitName": "Moon",
+        "subTraitName": "Pink Rocket",
+        "rarity": 0.1,
+        "rarityName": "Ultra Rare",
+        "rarityFrequency": 0.0011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Moon-Pink Rocket.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Moon",
         "subTraitName": "Rocket",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2103,7 +2296,7 @@
         "subTraitName": "Gray",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 14,
@@ -2117,10 +2310,23 @@
       },
       {
         "traitName": "Mouse",
+        "subTraitName": "Light Brown",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Mouse-Light Brown.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Mouse",
         "subTraitName": "White",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 14,
@@ -2137,7 +2343,7 @@
         "subTraitName": "Light Pink",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2147,10 +2353,23 @@
       },
       {
         "traitName": "Nigiri",
+        "subTraitName": "Pink",
+        "rarity": 0.3,
+        "rarityName": "Rare",
+        "rarityFrequency": 0.0034722222222222255,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Nigiri-Pink.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Nigiri",
         "subTraitName": "Red Orange",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2163,7 +2382,7 @@
         "subTraitName": "Black and White",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2173,10 +2392,23 @@
       },
       {
         "traitName": "Onigiri",
+        "subTraitName": "Black Sesame",
+        "rarity": 0.3,
+        "rarityName": "Rare",
+        "rarityFrequency": 0.0034722222222222255,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Onigiri-Black Sesame.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Onigiri",
         "subTraitName": "Flavored",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2189,7 +2421,7 @@
         "subTraitName": "Ash Brown",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2202,7 +2434,7 @@
         "subTraitName": "Brown",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2211,11 +2443,24 @@
         ]
       },
       {
+        "traitName": "Otter",
+        "subTraitName": "Gray",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Otter-Gray.png"
+          }
+        ]
+      },
+      {
         "traitName": "Ox",
         "subTraitName": "Beige",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2225,10 +2470,23 @@
       },
       {
         "traitName": "Ox",
+        "subTraitName": "Blue",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Ox-Blue.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Ox",
         "subTraitName": "Gold",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2241,7 +2499,7 @@
         "subTraitName": "Black and White",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2254,7 +2512,7 @@
         "subTraitName": "Blue",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.007496251874062973,
+        "rarityFrequency": 0.005787037037037043,
         "layers": [
           {
             "zIndex": 7,
@@ -2267,7 +2525,7 @@
         "subTraitName": "Pink",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.007496251874062973,
+        "rarityFrequency": 0.005787037037037043,
         "layers": [
           {
             "zIndex": 7,
@@ -2280,7 +2538,7 @@
         "subTraitName": "Purple",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.007496251874062973,
+        "rarityFrequency": 0.005787037037037043,
         "layers": [
           {
             "zIndex": 7,
@@ -2293,7 +2551,7 @@
         "subTraitName": "Gray",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2306,7 +2564,7 @@
         "subTraitName": "Pink",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2315,11 +2573,24 @@
         ]
       },
       {
+        "traitName": "Pig",
+        "subTraitName": "Pink Gray",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Pig-Pink Gray.png"
+          }
+        ]
+      },
+      {
         "traitName": "Poodle",
         "subTraitName": "Brown",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2329,10 +2600,23 @@
       },
       {
         "traitName": "Poodle",
+        "subTraitName": "Light Brown",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Poodle-Light Brown.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Poodle",
         "subTraitName": "White",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2342,10 +2626,23 @@
       },
       {
         "traitName": "Pumpkin",
+        "subTraitName": "Jack O Lantern",
+        "rarity": 0.2,
+        "rarityName": "Rare",
+        "rarityFrequency": 0.0023148148148148173,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Pumpkin-Jack O Lantern.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Pumpkin",
         "subTraitName": "Orange",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2358,7 +2655,7 @@
         "subTraitName": "White",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2371,7 +2668,7 @@
         "subTraitName": "Black",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2381,10 +2678,23 @@
       },
       {
         "traitName": "Ram",
+        "subTraitName": "Gray",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Ram-Gray.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Ram",
         "subTraitName": "White",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2397,7 +2707,7 @@
         "subTraitName": "Light Orange",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 14,
@@ -2411,10 +2721,23 @@
       },
       {
         "traitName": "Red Panda",
+        "subTraitName": "Medium Orange",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Red Panda-Medium Orange.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Red Panda",
         "subTraitName": "Red Orange",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 14,
@@ -2431,7 +2754,7 @@
         "subTraitName": "Blue",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2444,7 +2767,7 @@
         "subTraitName": "Pink",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2457,7 +2780,7 @@
         "subTraitName": "Purple",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2470,7 +2793,7 @@
         "subTraitName": "Brown",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2483,7 +2806,7 @@
         "subTraitName": "White",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2492,11 +2815,24 @@
         ]
       },
       {
+        "traitName": "Rooster",
+        "subTraitName": "Yellow",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Rooster-Yellow.png"
+          }
+        ]
+      },
+      {
         "traitName": "Sheep",
         "subTraitName": "Beige",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2509,7 +2845,7 @@
         "subTraitName": "Black",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2522,7 +2858,7 @@
         "subTraitName": "Blue",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2535,7 +2871,7 @@
         "subTraitName": "Brown",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2548,7 +2884,7 @@
         "subTraitName": "Green",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2561,7 +2897,7 @@
         "subTraitName": "Orange",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2574,7 +2910,7 @@
         "subTraitName": "Pink",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2587,7 +2923,7 @@
         "subTraitName": "Purple",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2600,7 +2936,7 @@
         "subTraitName": "Red",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2613,7 +2949,7 @@
         "subTraitName": "White",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2626,7 +2962,7 @@
         "subTraitName": "Yellow",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2639,7 +2975,7 @@
         "subTraitName": "Black",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2649,10 +2985,23 @@
       },
       {
         "traitName": "Shiba",
+        "subTraitName": "Cream",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Shiba-Cream.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Shiba",
         "subTraitName": "Red",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2665,7 +3014,7 @@
         "subTraitName": "Green",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2678,7 +3027,7 @@
         "subTraitName": "White Pink",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2687,11 +3036,24 @@
         ]
       },
       {
+        "traitName": "Snake",
+        "subTraitName": "Yellow",
+        "rarity": 1,
+        "rarityName": "Common",
+        "rarityFrequency": 0.011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Snake-Yellow.png"
+          }
+        ]
+      },
+      {
         "traitName": "Striped Cat",
         "subTraitName": "Gray",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2704,7 +3066,7 @@
         "subTraitName": "Orange",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2717,7 +3079,7 @@
         "subTraitName": "Pink",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2727,10 +3089,23 @@
       },
       {
         "traitName": "Sun",
+        "subTraitName": "Light Yellow",
+        "rarity": 0.1,
+        "rarityName": "Ultra Rare",
+        "rarityFrequency": 0.0011574074074074086,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Sun-Light Yellow.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Sun",
         "subTraitName": "Yellow",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2743,7 +3118,7 @@
         "subTraitName": "Yellow Orange",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2756,7 +3131,7 @@
         "subTraitName": "Avalanche",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2769,7 +3144,7 @@
         "subTraitName": "Black",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.007496251874062973,
+        "rarityFrequency": 0.005787037037037043,
         "layers": [
           {
             "zIndex": 7,
@@ -2782,7 +3157,7 @@
         "subTraitName": "Dark Brown",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.007496251874062973,
+        "rarityFrequency": 0.005787037037037043,
         "layers": [
           {
             "zIndex": 7,
@@ -2795,7 +3170,7 @@
         "subTraitName": "Ethereum",
         "rarity": 0.3,
         "rarityName": "Rare",
-        "rarityFrequency": 0.004497751124437783,
+        "rarityFrequency": 0.0034722222222222255,
         "layers": [
           {
             "zIndex": 7,
@@ -2808,7 +3183,7 @@
         "subTraitName": "Golden Brown",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.007496251874062973,
+        "rarityFrequency": 0.005787037037037043,
         "layers": [
           {
             "zIndex": 7,
@@ -2821,7 +3196,7 @@
         "subTraitName": "Red Velvet",
         "rarity": 0.5,
         "rarityName": "Rare",
-        "rarityFrequency": 0.007496251874062973,
+        "rarityFrequency": 0.005787037037037043,
         "layers": [
           {
             "zIndex": 7,
@@ -2834,7 +3209,7 @@
         "subTraitName": "Orange",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2844,10 +3219,23 @@
       },
       {
         "traitName": "Tiger",
+        "subTraitName": "Pink",
+        "rarity": 0.5,
+        "rarityName": "Rare",
+        "rarityFrequency": 0.005787037037037043,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Tiger-Pink.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Tiger",
         "subTraitName": "White",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2860,7 +3248,7 @@
         "subTraitName": "Solana",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2873,7 +3261,7 @@
         "subTraitName": "White",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.0014992503748125947,
+        "rarityFrequency": 0.0011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2886,7 +3274,7 @@
         "subTraitName": "Blue",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2896,10 +3284,23 @@
       },
       {
         "traitName": "Whale",
+        "subTraitName": "Gray",
+        "rarity": 0.5,
+        "rarityName": "Rare",
+        "rarityFrequency": 0.005787037037037043,
+        "layers": [
+          {
+            "zIndex": 7,
+            "fileName": "7-Lid/Whale-Gray.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Whale",
         "subTraitName": "White",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.014992503748125946,
+        "rarityFrequency": 0.011574074074074086,
         "layers": [
           {
             "zIndex": 7,
@@ -2957,6 +3358,18 @@
           {
             "zIndex": 10,
             "fileName": "10-Eyes/Huge Alien.png"
+          }
+        ]
+      },
+      {
+        "traitName": "Jack O Lantern",
+        "rarity": 0,
+        "rarityName": "Ultra Rare",
+        "rarityFrequency": 0,
+        "layers": [
+          {
+            "zIndex": 10,
+            "fileName": "10-Eyes/Jack O Lantern.png"
           }
         ]
       },
@@ -3257,7 +3670,7 @@
         "traitName": "All Hearts",
         "rarity": 0.2,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.015267175572519083,
+        "rarityFrequency": 0.014814814814814814,
         "layers": [
           {
             "zIndex": 5,
@@ -3269,7 +3682,7 @@
         "traitName": "Bears Boba",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.07633587786259541,
+        "rarityFrequency": 0.07407407407407407,
         "layers": [
           {
             "zIndex": 5,
@@ -3281,7 +3694,7 @@
         "traitName": "Cats Boba",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.07633587786259541,
+        "rarityFrequency": 0.07407407407407407,
         "layers": [
           {
             "zIndex": 5,
@@ -3293,7 +3706,7 @@
         "traitName": "Green Apple Boba",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.07633587786259541,
+        "rarityFrequency": 0.07407407407407407,
         "layers": [
           {
             "zIndex": 5,
@@ -3305,7 +3718,7 @@
         "traitName": "Half Cup Round Boba",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.07633587786259541,
+        "rarityFrequency": 0.07407407407407407,
         "layers": [
           {
             "zIndex": 5,
@@ -3317,7 +3730,7 @@
         "traitName": "Hearts and Stars",
         "rarity": 0.4,
         "rarityName": "Rare",
-        "rarityFrequency": 0.030534351145038167,
+        "rarityFrequency": 0.029629629629629627,
         "layers": [
           {
             "zIndex": 5,
@@ -3329,7 +3742,7 @@
         "traitName": "Hearts and Stars Partial",
         "rarity": 0.4,
         "rarityName": "Rare",
-        "rarityFrequency": 0.030534351145038167,
+        "rarityFrequency": 0.029629629629629627,
         "layers": [
           {
             "zIndex": 5,
@@ -3341,7 +3754,7 @@
         "traitName": "Hearts Partial",
         "rarity": 0.4,
         "rarityName": "Rare",
-        "rarityFrequency": 0.030534351145038167,
+        "rarityFrequency": 0.029629629629629627,
         "layers": [
           {
             "zIndex": 5,
@@ -3353,7 +3766,7 @@
         "traitName": "Lychee Boba",
         "rarity": 0.4,
         "rarityName": "Rare",
-        "rarityFrequency": 0.030534351145038167,
+        "rarityFrequency": 0.029629629629629627,
         "layers": [
           {
             "zIndex": 5,
@@ -3362,10 +3775,22 @@
         ]
       },
       {
+        "traitName": "Mango Boba",
+        "rarity": 0.4,
+        "rarityName": "Rare",
+        "rarityFrequency": 0.029629629629629627,
+        "layers": [
+          {
+            "zIndex": 5,
+            "fileName": "5-Boba/Mango Boba.png"
+          }
+        ]
+      },
+      {
         "traitName": "None",
         "rarity": 0.2,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.015267175572519083,
+        "rarityFrequency": 0.014814814814814814,
         "layers": [
           {
             "zIndex": 5,
@@ -3377,7 +3802,7 @@
         "traitName": "Pineapple Boba",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.07633587786259541,
+        "rarityFrequency": 0.07407407407407407,
         "layers": [
           {
             "zIndex": 5,
@@ -3389,7 +3814,7 @@
         "traitName": "Shaken Boba",
         "rarity": 0.1,
         "rarityName": "Ultra Rare",
-        "rarityFrequency": 0.007633587786259542,
+        "rarityFrequency": 0.007407407407407407,
         "layers": [
           {
             "zIndex": 5,
@@ -3401,7 +3826,7 @@
         "traitName": "Solana Boba",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.07633587786259541,
+        "rarityFrequency": 0.07407407407407407,
         "layers": [
           {
             "zIndex": 5,
@@ -3413,7 +3838,7 @@
         "traitName": "Stars Boba",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.07633587786259541,
+        "rarityFrequency": 0.07407407407407407,
         "layers": [
           {
             "zIndex": 5,
@@ -3425,7 +3850,7 @@
         "traitName": "Stars Partial",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.07633587786259541,
+        "rarityFrequency": 0.07407407407407407,
         "layers": [
           {
             "zIndex": 5,
@@ -3437,7 +3862,7 @@
         "traitName": "Strawberry Boba",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.07633587786259541,
+        "rarityFrequency": 0.07407407407407407,
         "layers": [
           {
             "zIndex": 5,
@@ -3449,7 +3874,7 @@
         "traitName": "Third Cup Round Black",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.07633587786259541,
+        "rarityFrequency": 0.07407407407407407,
         "layers": [
           {
             "zIndex": 5,
@@ -3461,7 +3886,7 @@
         "traitName": "Three Rows Boba",
         "rarity": 1,
         "rarityName": "Common",
-        "rarityFrequency": 0.07633587786259541,
+        "rarityFrequency": 0.07407407407407407,
         "layers": [
           {
             "zIndex": 5,

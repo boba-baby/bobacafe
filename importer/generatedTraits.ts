@@ -101,6 +101,7 @@ export type AllDrinkTraits =
   | "Gradient Purple"
   | "Gradient Purple-Orange"
   | "Gradient Yellow Green-Blue"
+  | "Matcha Latte"
   | "Solana"
   | "Solid Aqua"
   | "Solid Beige Cream"
@@ -119,7 +120,8 @@ export type AllDrinkTraits =
   | "Solid Purple"
   | "Solid Red"
   | "Solid Wine"
-  | "Solid Yellow Green";
+  | "Solid Yellow Green"
+  | "Strawberry Matcha";
 
 export const DrinkTraits = new Set([
   "Gradient Blue",
@@ -137,6 +139,7 @@ export const DrinkTraits = new Set([
   "Gradient Purple",
   "Gradient Purple-Orange",
   "Gradient Yellow Green-Blue",
+  "Matcha Latte",
   "Solana",
   "Solid Aqua",
   "Solid Beige Cream",
@@ -156,6 +159,7 @@ export const DrinkTraits = new Set([
   "Solid Red",
   "Solid Wine",
   "Solid Yellow Green",
+  "Strawberry Matcha",
 ]);
 
 export type AllBlushTraits = 
@@ -261,18 +265,23 @@ export type AllLidTraits =
   | "Alien-Gray"
   | "Alien-Green"
   | "Alpaca-Beige"
+  | "Alpaca-Brown"
   | "Alpaca-Pink"
   | "Bear-Brown"
   | "Bear-Polar"
   | "Bear-Purple"
   | "Bear-Yellow"
   | "Boba-Black"
+  | "Boba-Green"
   | "Boba-White"
+  | "Bread Roll-Matcha"
   | "Bread Roll-Plain"
   | "Bread Roll-Taro"
   | "Bull-Gold Ring"
   | "Bull-Solana"
+  | "Bull-White"
   | "Bunny-Brown"
+  | "Bunny-Pink"
   | "Bunny-White"
   | "Cat-Black Spots"
   | "Cat-Brown"
@@ -281,6 +290,7 @@ export type AllLidTraits =
   | "Cat-White"
   | "Cow-Black White"
   | "Cow-Brown White"
+  | "Cow-Pink White"
   | "Cupcake-Blue Sprinkles"
   | "Cupcake-Orange"
   | "Cupcake-Pink"
@@ -290,32 +300,44 @@ export type AllLidTraits =
   | "Dough-Blue"
   | "Dough-Pink"
   | "Dough-White"
+  | "Dragon-Gold"
   | "Dragon-Green"
   | "Dragon-Red"
+  | "Ghost-Blue"
   | "Ghost-Pink"
   | "Ghost-White"
+  | "Ghost-Yellow"
   | "Gorilla-Blue Gray"
   | "Gorilla-Gray"
+  | "Gorilla-Purple"
   | "Hamster-Brown"
   | "Hamster-Gray"
   | "Hamster-Orange"
   | "Horse-Brown"
+  | "Horse-Pink"
   | "Horse-White"
   | "Ice Cream-Chocolate"
   | "Ice Cream-Strawberry"
   | "Ice Cream-Vanilla"
+  | "Monkey-Black"
   | "Monkey-Brown"
   | "Monkey-Brown and Pink"
+  | "Moon-Pink Rocket"
   | "Moon-Rocket"
   | "Mouse-Gray"
+  | "Mouse-Light Brown"
   | "Mouse-White"
   | "Nigiri-Light Pink"
+  | "Nigiri-Pink"
   | "Nigiri-Red Orange"
   | "Onigiri-Black and White"
+  | "Onigiri-Black Sesame"
   | "Onigiri-Flavored"
   | "Otter-Ash Brown"
   | "Otter-Brown"
+  | "Otter-Gray"
   | "Ox-Beige"
+  | "Ox-Blue"
   | "Ox-Gold"
   | "Panda-Black and White"
   | "Panda-Blue"
@@ -323,19 +345,25 @@ export type AllLidTraits =
   | "Panda-Purple"
   | "Pig-Gray"
   | "Pig-Pink"
+  | "Pig-Pink Gray"
   | "Poodle-Brown"
+  | "Poodle-Light Brown"
   | "Poodle-White"
+  | "Pumpkin-Jack O Lantern"
   | "Pumpkin-Orange"
   | "Pumpkin-White"
   | "Ram-Black"
+  | "Ram-Gray"
   | "Ram-White"
   | "Red Panda-Light Orange"
+  | "Red Panda-Medium Orange"
   | "Red Panda-Red Orange"
   | "Rock-Blue"
   | "Rock-Pink"
   | "Rock-Purple"
   | "Rooster-Brown"
   | "Rooster-White"
+  | "Rooster-Yellow"
   | "Sheep-Beige"
   | "Sheep-Black"
   | "Sheep-Blue"
@@ -348,12 +376,15 @@ export type AllLidTraits =
   | "Sheep-White"
   | "Sheep-Yellow"
   | "Shiba-Black"
+  | "Shiba-Cream"
   | "Shiba-Red"
   | "Snake-Green"
   | "Snake-White Pink"
+  | "Snake-Yellow"
   | "Striped Cat-Gray"
   | "Striped Cat-Orange"
   | "Striped Cat-Pink"
+  | "Sun-Light Yellow"
   | "Sun-Yellow"
   | "Sun-Yellow Orange"
   | "Teddy Bear-Avalanche"
@@ -363,10 +394,12 @@ export type AllLidTraits =
   | "Teddy Bear-Golden Brown"
   | "Teddy Bear-Red Velvet"
   | "Tiger-Orange"
+  | "Tiger-Pink"
   | "Tiger-White"
   | "Unicorn-Solana"
   | "Unicorn-White"
   | "Whale-Blue"
+  | "Whale-Gray"
   | "Whale-White";
 
 export const LidTraits = new Set([
@@ -374,18 +407,23 @@ export const LidTraits = new Set([
   "Alien-Gray",
   "Alien-Green",
   "Alpaca-Beige",
+  "Alpaca-Brown",
   "Alpaca-Pink",
   "Bear-Brown",
   "Bear-Polar",
   "Bear-Purple",
   "Bear-Yellow",
   "Boba-Black",
+  "Boba-Green",
   "Boba-White",
+  "Bread Roll-Matcha",
   "Bread Roll-Plain",
   "Bread Roll-Taro",
   "Bull-Gold Ring",
   "Bull-Solana",
+  "Bull-White",
   "Bunny-Brown",
+  "Bunny-Pink",
   "Bunny-White",
   "Cat-Black Spots",
   "Cat-Brown",
@@ -394,6 +432,7 @@ export const LidTraits = new Set([
   "Cat-White",
   "Cow-Black White",
   "Cow-Brown White",
+  "Cow-Pink White",
   "Cupcake-Blue Sprinkles",
   "Cupcake-Orange",
   "Cupcake-Pink",
@@ -403,32 +442,44 @@ export const LidTraits = new Set([
   "Dough-Blue",
   "Dough-Pink",
   "Dough-White",
+  "Dragon-Gold",
   "Dragon-Green",
   "Dragon-Red",
+  "Ghost-Blue",
   "Ghost-Pink",
   "Ghost-White",
+  "Ghost-Yellow",
   "Gorilla-Blue Gray",
   "Gorilla-Gray",
+  "Gorilla-Purple",
   "Hamster-Brown",
   "Hamster-Gray",
   "Hamster-Orange",
   "Horse-Brown",
+  "Horse-Pink",
   "Horse-White",
   "Ice Cream-Chocolate",
   "Ice Cream-Strawberry",
   "Ice Cream-Vanilla",
+  "Monkey-Black",
   "Monkey-Brown",
   "Monkey-Brown and Pink",
+  "Moon-Pink Rocket",
   "Moon-Rocket",
   "Mouse-Gray",
+  "Mouse-Light Brown",
   "Mouse-White",
   "Nigiri-Light Pink",
+  "Nigiri-Pink",
   "Nigiri-Red Orange",
   "Onigiri-Black and White",
+  "Onigiri-Black Sesame",
   "Onigiri-Flavored",
   "Otter-Ash Brown",
   "Otter-Brown",
+  "Otter-Gray",
   "Ox-Beige",
+  "Ox-Blue",
   "Ox-Gold",
   "Panda-Black and White",
   "Panda-Blue",
@@ -436,19 +487,25 @@ export const LidTraits = new Set([
   "Panda-Purple",
   "Pig-Gray",
   "Pig-Pink",
+  "Pig-Pink Gray",
   "Poodle-Brown",
+  "Poodle-Light Brown",
   "Poodle-White",
+  "Pumpkin-Jack O Lantern",
   "Pumpkin-Orange",
   "Pumpkin-White",
   "Ram-Black",
+  "Ram-Gray",
   "Ram-White",
   "Red Panda-Light Orange",
+  "Red Panda-Medium Orange",
   "Red Panda-Red Orange",
   "Rock-Blue",
   "Rock-Pink",
   "Rock-Purple",
   "Rooster-Brown",
   "Rooster-White",
+  "Rooster-Yellow",
   "Sheep-Beige",
   "Sheep-Black",
   "Sheep-Blue",
@@ -461,12 +518,15 @@ export const LidTraits = new Set([
   "Sheep-White",
   "Sheep-Yellow",
   "Shiba-Black",
+  "Shiba-Cream",
   "Shiba-Red",
   "Snake-Green",
   "Snake-White Pink",
+  "Snake-Yellow",
   "Striped Cat-Gray",
   "Striped Cat-Orange",
   "Striped Cat-Pink",
+  "Sun-Light Yellow",
   "Sun-Yellow",
   "Sun-Yellow Orange",
   "Teddy Bear-Avalanche",
@@ -476,10 +536,12 @@ export const LidTraits = new Set([
   "Teddy Bear-Golden Brown",
   "Teddy Bear-Red Velvet",
   "Tiger-Orange",
+  "Tiger-Pink",
   "Tiger-White",
   "Unicorn-Solana",
   "Unicorn-White",
   "Whale-Blue",
+  "Whale-Gray",
   "Whale-White",
 ]);
 
@@ -488,6 +550,7 @@ export type AllEyesTraits =
   | "Closed V"
   | "Dots"
   | "Huge Alien"
+  | "Jack O Lantern"
   | "Oval"
   | "Oval Highlighted"
   | "Oval Single Lash"
@@ -518,6 +581,7 @@ export const EyesTraits = new Set([
   "Closed V",
   "Dots",
   "Huge Alien",
+  "Jack O Lantern",
   "Oval",
   "Oval Highlighted",
   "Oval Single Lash",
@@ -554,6 +618,7 @@ export type AllBobaTraits =
   | "Hearts and Stars Partial"
   | "Hearts Partial"
   | "Lychee Boba"
+  | "Mango Boba"
   | "None"
   | "Pineapple Boba"
   | "Shaken Boba"
@@ -574,6 +639,7 @@ export const BobaTraits = new Set([
   "Hearts and Stars Partial",
   "Hearts Partial",
   "Lychee Boba",
+  "Mango Boba",
   "None",
   "Pineapple Boba",
   "Shaken Boba",

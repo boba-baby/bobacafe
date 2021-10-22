@@ -519,7 +519,7 @@ export const Home = () => {
           </p>
           <h3>How much will BobaBabies cost to mint?</h3>
           <p>All BobaBabies will cost 0.9 SOL to mint.</p>
-          <h3>How does the buyback and burn work?</h3>
+          <h3>How does the 100% buyback and burn work?</h3>
           <p>
             100% of all proceeds from secondaries (such as on Solanart or
             Digital Eyes) will go towards buying bobababies at floor price and
